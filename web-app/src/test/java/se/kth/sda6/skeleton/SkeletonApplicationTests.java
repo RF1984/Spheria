@@ -1,10 +1,10 @@
-package se.sda.webapp;
+package se.kth.sda6.skeleton;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WebAppApplicationTests {
+class SkeletonApplicationTests {
 
 	@Test
 	void contextLoads() {
