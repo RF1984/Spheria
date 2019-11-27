@@ -15,7 +15,6 @@ import Navbar from "./components/layout/Navbar";
 import LoginPage from "./components/auth/LoginPage";
 import HomePage from './components/home/HomePage';
 import PostsPage from "./components/posts/PostsPage";
-import ChatPage from './components/chat/ChatPage';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(Auth.isLoggedIn());
@@ -29,10 +28,6 @@ function App() {
                     <Switch>
                         <Route path="/posts">
                             <PostsPage/>
-                        </Route>
-
-                        <Route path="/chat">
-                            <ChatPage/>
                         </Route>
 
                         <Route path="/">
