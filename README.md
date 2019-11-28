@@ -1,4 +1,6 @@
 # Spheria
-Web app that helps parents teaching the value of money to kids, exchange toys, have a "toy balance", etc..
+** (We value toys)**  <br/>
+This is a simple web application meant for the youngest ones.The purpose here is to educate kids in the value of money and currency by comparing the value of the wanted toy in different countries in the world. The point is not to prevent the kid from getting the wanted toy, but give children some understanding of money value.
+With this application the children can create their own profile and look for a toy they really want in our toy database. Once the toy is selected, the app will give a value of the toy in SEK (for now this will only be available in Sweden)and convert the value in SEK to a different currency used in the world and compare what you can get for that value of money there. The main purpose is to teach kids the value of money in different countries in the world.
+The second part of the application is the allowance. This part is meant for the children, but also the parents. The children can have an allowance controlled by the parents. If there is a toy that the child is interested in, he/she can see the price and have separate field for their own allowance and how much they need in order to get the toy. What are the chores the child needs to do in order to get the allowance is up to the parents.
 
-Ebrahim was here.
