@@ -31,13 +31,13 @@ public class TaskController {
     }
 
     @PostMapping ("")
-    public Task create(@RequestBody Task newPost){
-        return taskService.create(newPost);
+    public Task create(@RequestBody Task newTask){
+        return taskService.create(newTask);
     }
 
     @PutMapping ("")
-    public Task update(@RequestBody Task updatedPost){
-        return taskService.update(updatedPost);
+    public Task update(@RequestBody Task updatedTask){
+        return taskService.update(updatedTask);
     }
 
     @DeleteMapping("/{id}")
