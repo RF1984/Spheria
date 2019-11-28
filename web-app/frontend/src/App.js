@@ -10,6 +10,7 @@ import './App.css';
 
 import Auth from './services/Auth';
 import Navbar from "./components/layout/Navbar";
+import Footer from './components/layout/Footer';
 
 // Import pages
 import LoginPage from "./components/auth/LoginPage";
@@ -34,6 +35,7 @@ function App() {
                           <HomePage/>
                         </Route>
                     </Switch>
+                    <Footer/>
                 </div>
             </Router>
   );
