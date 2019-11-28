@@ -6,9 +6,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-/*
-    @TODO Autowire the PostRepository and use it to implement all the service methods.
- */
 @Service
 public class PostService {
 
@@ -16,7 +13,7 @@ public class PostService {
     private PostRepository postRepository;
 
     public List<Post> getAll() {
-        // @TODO get all posts and return them as List<Post>
+        //  get all toys and return them as List<Toy>
         return postRepository.findAll();
     }
 
