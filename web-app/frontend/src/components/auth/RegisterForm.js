@@ -7,11 +7,10 @@ function RegisterForm({onSubmit}) {
 
     return (
         <div className="card">
-            <div className="card-body">
+            <div className="card-body bg-warning">
                 <h4 className="card-title">Sign up</h4>
                 <div>
                     <div className="form-group">
-                        <label>Name:</label>
                         <input 
                             type="text"
                             className="form-control"
@@ -21,7 +20,6 @@ function RegisterForm({onSubmit}) {
                     </div>
 
                     <div className="form-group">
-                        <label>Email:</label>
                         <input
                             type="email"
                             value={email}
@@ -31,7 +29,6 @@ function RegisterForm({onSubmit}) {
                     </div>
 
                     <div className="form-group">
-                        <label>Password:</label>
                         <input 
                             type="password" 
                             placeholder="Password" 
@@ -41,6 +38,7 @@ function RegisterForm({onSubmit}) {
                     </div>
 
                     <div className="form-group">
+                    <img src="parenthood_1.svg" class="rounded float-right" width="50" height="50"alt="logo"/>
                         <button 
                             className="btn btn-success"
                             onClick={e => onSubmit({name, email, password})}>

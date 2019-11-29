@@ -1,6 +1,13 @@
 body {
   min-height: 100vh;
-  background: linear-gradient(to right, #2c3e50, #3498db);
+  background-image: linear-gradient(to right top, #6bd0d1, #68d6c9, #6ddcbe, #7be1af, #8fe49e, #92e79f, #94eb9f, #97eea0, #85f2b5, #74f6ca, #67f9de, #5ffbf1);
+  /*background-image: url("27192.svg");
+  background-repeat: no-repeat;
+  background-size: 1440px 1440px;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: teal;*/
+  
 }
 
 .App {
@@ -24,4 +31,67 @@ body {
 
 .App-link {
   color: #09d3ac;
+}
+
+p.big-p {
+  font-size: 22pt;
+  font-weight: 400;
+}
+
+p.big-p::first-letter {
+  color: #ffc107;
+  font-size: 50pt;
+  font-weight: 600;
+}
+
+.card {
+  background-color: white;
+  
+}
+
+.row-3 {
+  position: relative;
+  float: left;
+  height: 120pt;
+  max-width: 100%;
+  width: 33.3%;
+}
+
+@media screen and (max-width: 600px) {
+  .row-3 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .row-3 {
+    width: 100%;
+  }
+}
+
+.mt-5 {
+  margin-top: 0pt !important;
+  background-color: rgba(0, 0, 0, 0.025);
+  min-height: 100vh;
+}
+
+.center-content {
+  align-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.big-content p {
+  font-size: 22pt;
+}
+
+.div-img {
+  position: relative;
+  z-index: -1;
+  border: 1px solid #000000;
+}
+
+.div-img img {
+  max-width:100%;
+  max-height:100%;
 }

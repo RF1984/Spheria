@@ -6,11 +6,10 @@ function LoginForm({onSubmit}) {
 
     return (
         <div className="card">
-            <div className="card-body">
+            <div className="card-body bg-warning rounded">
                 <h4 className="card-title" >Login</h4>
                 <div>
                     <div className="form-group">
-                        <label>Email:</label>
                         <input 
                             type="email"
                             className="form-control"
@@ -20,7 +19,6 @@ function LoginForm({onSubmit}) {
                     </div>
 
                     <div className="form-group">
-                        <label>Password:</label>
                         <input 
                             type="password" 
                             placeholder="Password" 
@@ -30,8 +28,9 @@ function LoginForm({onSubmit}) {
                     </div>
 
                     <div className="form-group">
+                    <img src="parenthood.svg" class="rounded float-right " width="50" height="50"alt="logo"/>
                         <button 
-                            className="btn btn-info" 
+                            className="btn btn-success"
                             onClick={() => onSubmit({email, password})}>
                             Login
                         </button>
