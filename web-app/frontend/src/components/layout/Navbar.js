@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 function Navbar({onLogout}) {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <img src ={"/images/logo_transparent.png"} width="100" height="100"/>
-            <a className="navbar-brand" href="#">FoodHub</a>
+        <nav className="navbar navbar-expand-sm navbar-light bg-warning text-dark">
+            <img src="logo60.png" alt="logo"/>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -20,17 +19,26 @@ function Navbar({onLogout}) {
 
                         <li className="nav-item">
                             <Link to="/posts" className="nav-link">
-                                Posts
+                                Link1
                             </Link>
                         </li>
 
                         <li className="nav-item">
                             <Link to="/chat" className="nav-link">
-                                Chat
+                                Link2
                             </Link>
                         </li>
                 </ul>
-                <button className="btn btn-outline-info my-2 my-sm-0" onClick={onLogout}>Logout</button>
+
+            
+                <div class="nav-item dropdown ml-auto">
+                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                         <i class="fas fa-user"></i> ProfileTEST </a>
+                        </div>
+                
+
+                <button className="btn btn-light my-2 my-sm-0" onClick={onLogout}>Logout</button>
             </div>
         </nav>
     );
