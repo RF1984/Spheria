@@ -39,4 +39,8 @@ public class TaskService {
         // @TODO delete the post by id
         taskRepository.deleteById(id);
     }
+    public List<Task> getAllByUserId (Long userId)
+    {
+        return taskRepository.findAllByUserId(userId);
+    }
 }

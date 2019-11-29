@@ -37,8 +37,9 @@ public class Task {
     public Task() {
     }
 
-    public Task (String taskName) {
+    public Task (String taskName, Double taskValue, User user) {
         this.taskName = taskName;
+        this.user = user;
     }
 
     public Long getId() {

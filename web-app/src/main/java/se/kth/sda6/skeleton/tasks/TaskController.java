@@ -20,8 +20,8 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
     @GetMapping("")
-    public List<Task> getAllPosts(){
-        return taskService.getAll();
+    public List<Task> getAllTasks(@RequestBody Long userId){
+        return taskService.getAllByUserId(userId);
     }
 
     @GetMapping("/{id}")
@@ -34,6 +34,7 @@ public class TaskController {
     public Task create(@RequestBody Task newTask){
         return taskService.create(newTask);
     }
+    
 
     @PutMapping ("")
     public Task update(@RequestBody Task updatedTask){
