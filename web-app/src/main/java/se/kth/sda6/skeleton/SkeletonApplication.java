@@ -33,11 +33,14 @@ public class SkeletonApplication {
 	public CommandLineRunner demo(ToyRepository repository) {
 		return (args) -> {
 			// save a few customers
-			repository.save(new Toy("Jack", 19.0));
-			repository.save(new Toy("Raf", 1.0));
-			repository.save(new Toy("Lilo", 19.8));
-			repository.save(new Toy("Poli", 70.75));
-			repository.save(new Toy("Kimo", 50.0));
+			repository.save(new Toy("NERF N-Strike Elite Delta Power", 429.0));
+			repository.save(new Toy("Monopol: Cheater’s Edition SE", 299.0));
+			repository.save(new Toy("Cruiser 16\" Cykel Gul", 1699.0));
+			repository.save(new Toy("Colorful Cupcakes Pussel 500 Delar", 199.0));
+			repository.save(new Toy("Jätte Plockepinn", 199.0));
+			repository.save(new Toy("LEGO® Star Wars™ Action Battle Hoth™ Generator Attack", 257.0));
+			repository.save(new Toy("Sparkcykel Classic Big Wheel Vit", 2199.0));
+			repository.save(new Toy("Fab Lab Face Tattoo Klistertatueringar", 199.0));
 		};
 	}
 
