@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import Auth from "../../services/Auth";
+import Footer from '../layout/Footer';
 
 class LoginPage extends Component {
     async login(loginData) {
@@ -68,6 +69,7 @@ class LoginPage extends Component {
                             </div>
                         </div>
                     </div>
+                    <Footer/>
                 </div>
             </div>
         );
