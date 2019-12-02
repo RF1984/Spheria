@@ -27,12 +27,14 @@ function App() {
   const loggedInRouter = (
             <Router>
                 <Navbar onLogout={() => Auth.logout()} />
+                
 
                 <div className="container mt-5">
                     <Switch>
                         <Route path="/posts">
                             <PostsPage/>
                         </Route>
+
 
                         <Route path="/chat">
                             <ChatPage/>
@@ -42,7 +44,10 @@ function App() {
                           <HomePage/>
                         </Route>
                     </Switch>
-                    <Footer/>
+                    
+                </div>
+                <div>
+                <Footer/>
                 </div>
             </Router>
   );
