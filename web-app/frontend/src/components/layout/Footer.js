@@ -14,7 +14,7 @@ const FooterPage = () => {
               We make a difference.
             </p>
           </MDBCol>
-          <MDBCol md="6">
+          <MDBCol md="6 text-md-right">
             <h5 className="title"></h5>
             <ul>
               <li className="list-unstyled">

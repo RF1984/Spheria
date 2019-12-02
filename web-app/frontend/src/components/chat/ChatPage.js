@@ -24,22 +24,7 @@ class ChatPage extends Component {
                     <div class="input-field third-wrap">
                         <button class="btn-search" type="button">Search</button>
                     </div>
-                </div>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                
-                <br/>
-                
-
-                <img src="rocket.svg" class="rounded float-left" width="75" height="75"alt="logo"/>
-                <img src="tea-pot.svg" class="rounded float-right" width="75" height="75"alt="logo"/>
-                
+                </div>               
                 </center>
                 </div>
                 
