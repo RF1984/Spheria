@@ -18,6 +18,9 @@ public class Toy {
     @Column(name = "toyPrice")
     private double toyPrice;
 
+    @Column(name = "toyPhoto")
+    private byte[] toyPhoto;
+
     //@ManyToOne()
     //private User user;
 
@@ -32,10 +35,11 @@ public class Toy {
         this.user = user;
     }*/
 
-    public Toy(String toyName, double toyPrice) {
+    public Toy(String toyName, double toyPrice, byte[] toyPhoto) {
         this.toyName = toyName;
         this.toyPrice = toyPrice;
         //this.user = user;
+        this.toyPhoto = toyPhoto;
     }
 
     public Long getId() {
@@ -60,6 +64,14 @@ public class Toy {
 
     public void setToy_Price(double toyPrice) {
         this.toyPrice = toyPrice;
+    }
+
+    public byte[] getToy_Photo() {
+        return toyPhoto;
+    }
+
+    public void setToy_Photo(byte[] toyPhoto) {
+        this.toyPhoto = toyPhoto;
     }
 }
 
