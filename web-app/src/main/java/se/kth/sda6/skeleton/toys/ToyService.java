@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ToyService {
@@ -18,6 +19,14 @@ public class ToyService {
         //  get all toys and return them as List<Toy>
         return toyRepository.findAll();
     }
+
+    public List<Toy> getByName(String name) {
+        //  get a toy by name
+        return toyRepository.findAll().stream()
+                .filter(toy -> toy.getToy_Name().contains(name) )
+                .collect(Collectors.toList());
+    }
+
 
     public Optional<Toy> getByID(Long id) {
         //  get a toy by ID if it exists

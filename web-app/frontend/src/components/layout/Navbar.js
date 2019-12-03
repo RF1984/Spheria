@@ -34,7 +34,7 @@ function Navbar({onLogout}) {
                 <div class="nav-item dropdown ml-auto">
                          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                         <i class="fas fa-user"></i> ProfileTEST </a>
+                         <i class="fa fa-user"></i> Profile </a>
                         </div>
                 
 

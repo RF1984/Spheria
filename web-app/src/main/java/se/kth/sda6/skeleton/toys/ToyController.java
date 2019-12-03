@@ -15,8 +15,23 @@ public class ToyController {
     @Autowired
     private ToyService toyService;
 
-    @GetMapping("")
+    /*@GetMapping("")
     public List<Toy> getAllToys(){
+        return toyService.getAll();
+    }
+
+    @GetMapping("/{name}")
+    public List<Toy> getByName(@PathVariable String name)
+    {
+        if (toyService.getByName(name).size() == 0 )
+            throw  new ResponseStatusException(HttpStatus.NOT_FOUND);
+        //else
+        return toyService.getByName(name);
+    }*/
+    @GetMapping("")
+    public List<Toy> getAllToys(@RequestParam(required = false) String name){
+        if (name != null){
+            return toyService.getByName(name);}
         return toyService.getAll();
     }
 
