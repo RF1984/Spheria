@@ -46,7 +46,7 @@ public class SkeletonApplication {
 			repository.save(new Toy("Jätte Plockepinn", 199.0, null));
 			repository.save(new Toy("LEGO® Star Wars™ Action Battle Hoth™ Generator Attack", 257.0, null));
 			repository.save(new Toy("Sparkcykel Classic Big Wheel Vit", 2199.0, null));
-			repository.save(new Toy("Fab Lab Face Tattoo Klistertatueringar", 199.0, null));
+			repository.save(new Toy("Fab Lab  undefined Face Tattoo Klistertatueringar", 199.0, null));
 		};
 	}
 

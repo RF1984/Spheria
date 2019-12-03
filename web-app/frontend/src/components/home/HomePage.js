@@ -1,5 +1,6 @@
 
 import React, { Component } from "react";
+import Search from "./Search";
 
 class HomePage extends Component {
     render() {
@@ -13,18 +14,10 @@ class HomePage extends Component {
                 <center>       
                     <p className="big-p">
                         Here you can find your new toy!
-                        <br />
-                        Try serch!
                     </p>
-                    <div class="inner-form">
-                    <div class="input-field first-wrap">
-                        <input id="search" type="text" placeholder="Find your toy" />
+                    <div>
+                        <Search/>
                     </div>
-                     
-                    <div class="input-field third-wrap">
-                        <button class="btn-search" type="button">Search</button>
-                    </div>
-                </div>               
                 </center>
                 </div>
                 
