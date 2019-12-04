@@ -1,8 +1,10 @@
 package se.kth.sda6.skeleton.auth;
 
+import com.auth0.jwt.interfaces.Claim;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -12,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class AuthService {
@@ -23,12 +26,16 @@ public class AuthService {
 
     private static final Logger logger = LoggerFactory.getLogger("AuthService");
 
-    public String getLoggedInUserEmail() {
-        Object maybeUserDetails = SecurityContextHolder.getContext().getAuthentication().getDetails();
-        if (maybeUserDetails instanceof UserDetails) {
-            return ((UserDetails) maybeUserDetails).getUsername();
-        }
-        return null;
+    public String getLoggedInUserEmail(String authorizationHeader) {
+        try {
+            // remove "Bearer" prefix from header
+            String token = authorizationHeader.split(" ")[1];
+
+            Map<String, Claim> claims = jwtEncoderDecoder.verify(token);
+            return claims.get("email").asString();
+        } catch (Exception e) {}
+
+        return "";
     }
 
     public String createAuthToken(String email) {

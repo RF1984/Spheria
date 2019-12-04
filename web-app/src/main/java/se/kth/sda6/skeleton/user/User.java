@@ -1,5 +1,6 @@
 package se.kth.sda6.skeleton.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -19,7 +20,6 @@ public class User {
     @Column(name = "email", unique = true)
     private String email;
 
-
     @Length(min = 5, max=100, message = "Password length most be between 5-100 characters")
     @Column(name = "password")
     private String password;
@@ -28,15 +28,28 @@ public class User {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "balance")
+    private double balance;
+
     // Hibernate needs a default constructor to function
-    public User() {}
+    public User() {
+       balance = 0.0;
+    }
 
     public User(@Email(message = "Invalid email address! Please provide a valid email address") @NotEmpty(message = "Please provide an email address") String email, @Length(min = 5, max = 100, message = "Password length most be between 5-100 characters") String password, @Length(min = 3, max = 100, message = "Name must be between 3-100 characters") String name) {
         this.email = email;
         this.password = password;
         this.name = name;
+        balance = 0.0;
     }
 
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
 
     public Long getId() {
         return id;
