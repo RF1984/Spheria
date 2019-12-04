@@ -64,7 +64,7 @@ class LoginPage extends Component {
                                 </div>
                                 <img src="aeroplane.svg" class="rounded float-left" width="75" height="75"alt="logo"/>
                                 <img src="baby.svg" class="rounded mx-auto d-block" width="110" height="110"alt="logo"/>
-                                <img src="toy.svg" class="rounded float-right" width="90" height="90"alt="logo"/>
+                                <img src="rocket.svg" class="rounded float-right" width="75" height="75"alt="logo"/>
                             </div>
                         </div>
                     </div>

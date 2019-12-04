@@ -1,6 +1,7 @@
 import React from 'react';
 import './Popup.css';
 import ToysApi from '../../api/ToysApi';
+import Convert from "./Curency";
 
 class SearchItem extends React.Component {
 
@@ -28,13 +29,16 @@ class SearchItem extends React.Component {
                 <div className="modal">
                     <a className="close" onClick={close}>
                         &times;
-    </a>
+                    </a>
                     <div className="header"> {item.toy_Name} </div>
                     <div className="content">
                         <img width="50px" height="50px " src={item.toy_Photo}
                             alt={item.toy_Name} height="100" width="100"></img> {item.toy_Name}
                     </div>
                     Price: {item.toy_Price}
+                <div>
+                    <Convert price ={item.toy_Price}/>
+                </div>
                 </div>
             )
     }
