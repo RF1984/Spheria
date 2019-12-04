@@ -1,95 +1,82 @@
 import React from 'react';
+import Popup from "reactjs-popup";
 import './Search.css'
-import axios from 'axios';
 import ToysApi from '../../api/ToysApi';
+import SearchItem from "./SearchItem";
 
 
 class Search extends React.Component {
 
-        constructor( props ) {
-            super ( props );
+    constructor(props) {
+        super(props);
 
-            this.state = {
-                query: '', 
-                results: [],
-                //loading: false,
-                //message: 'n'
-                
-            };
-
-            this.cancel ='';
-        }
-
-        fetchSearch = (query) => {
-            ToysApi.getToyByName(query)
-            .then(({data}) => this.setState({results: data}))
-            .catch(err => console.error(err));
-
-           
-        }
-
-        /*fetchSearchResults = ( updatedPageNo = '', query  ) => {
-            const pageNumber = updatedPageNo ? `&page=${updatedPageNo}` : '';
-            const searchUrl = `https://pixabay.com/api/?key=12413278-79b713c7e196c7a3defb5330e&q=${query}${pageNumber}`;
-                if (this.cancel) {
-                    this.cancel.cancel();
-                }
-                this.cancel = axios.CancelToken.source();
-                axios.get(searchUrl, {cancelToken: this.cancel.token,})
-                .then((res) => {const resultNotFoundMsg = !res.data.hits.lenght
-                    ? 'There no more results.' :'';
-                                    this.state({
-                                        results: res.data.hits,
-                                        message: resultNotFoundMsg,
-                                        loading: false,
-                                    })
-                })
-                .catch((error) => {
-                    if (axios.isCancel(error) || error) {
-                        this.setState({
-                            loading: false,
-                            message: 'Failed to fetch results.Please check network',
-                        });
-                    }
-                });
-        }; */
-        
-        
-        
-
-        handleOnInputChange = (event) => {
-            const query = event.target.value;
-            //console.warn(this.state);
-            this.setState({ query});
-            this.fetchSearch(query);
+        this.state = {
+            query: '',
+            results: [],
+            loading: false
         };
-    
-    render () {
+    }
+
+    fetchSearch = (query) => {
+        if (query.length > 0 && query.trim() != '') {
+            console.log(query)
+            ToysApi.getToyByName(query)
+                .then(({ data }) => this.setState({ results: data }))
+                .catch(err => console.error(err));
+        }
+    }
+
+    handleOnInputChange = (event) => {
+        const query = event.target.value;
+        if (!query) {
+            this.setState({ query, results: [] });
+        } else
+            this.setState({ query: query, loading: true })
+        this.fetchSearch(query);
+    };
+
+    render() {
         const { query } = this.state;
         return (
             <div>
+                <div className="App">
+
+                </div>
                 <div className="container">
-                    {/*Heading*/}
-                    <h2 className="heading"> Live Search</h2>
-                    {/*SearchInput*/}
-                    <label className="search label" htmlFor="search-input">
-                        <input
-                            type="text"
-                            name="query"
-                            value={query} 
-                            id="search-input"
-                            placeholder="Search..."
-                            onChange= {e => this.handleOnInputChange(e)}
-                        />
-                        <i className="fa fa-search search-icon" aria-hidden="true"/>
-                </label>
-                <ul>
-                    {
-                        this.state.results.map (result => 
-                        <li>{result.toy_Name}</li>
-                            ) 
-                    }
-                </ul>
+                    <div className="rowrow mt-4">
+                        <div className="col-md-6">
+                            <label className="search label" htmlFor="search-input">
+                                <input
+                                    type="text"
+                                    name="query"
+                                    value={query}
+                                    id="search-input"
+                                    placeholder="Search..."
+                                    onChange={e => this.handleOnInputChange(e)}
+                                />
+                                <i className="fa fa-search search-icon" aria-hidden="true" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="search-container">
+                        <ul>
+                            {
+                                this.state.results.map(result =>
+                                    <li title="Click to view product">
+                                        <Popup modal trigger={<div className="search-item">
+                                            <a>
+                                                <img width="50px" height="50px " src={result.toy_Photo}
+                                                    alt={result.toy_Name} height="100" width="100"></img> {result.toy_Name}
+                                            </a>
+                                        </div>}>
+                                            {close => <SearchItem close={close} item={result}/>}
+                                        </Popup>
+                                    </li>
+                                )
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
         )

@@ -23,7 +23,7 @@ public class ToyService {
     public List<Toy> getByName(String name) {
         //  get a toy by name
         return toyRepository.findAll().stream()
-                .filter(toy -> toy.getToy_Name().contains(name) )
+                .filter(toy -> toy.getToy_Name().toLowerCase().contains(name.toLowerCase()) )
                 .collect(Collectors.toList());
     }
 

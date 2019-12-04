@@ -6,8 +6,8 @@ function RegisterForm({onSubmit}) {
     const [password, setPassword] = useState("");
 
     return (
-        <div className="card">
-            <div className="card-body bg-warning">
+        <div className="card ">
+            <div className="card-body bg-warning rounded">
                 <h4 className="card-title">Sign up</h4>
                 <div>
                     <div className="form-group">
