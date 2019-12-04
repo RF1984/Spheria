@@ -4,3 +4,11 @@ footer {
     width:100%;
     background:#ffc107;
  }
+
+ footer ul {
+ text-align: center;
+ display: inline-flex;
+ }
+ footer ul li {
+     margin-right: 10px;
+ }
