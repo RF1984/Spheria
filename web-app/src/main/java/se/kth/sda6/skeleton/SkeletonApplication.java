@@ -36,17 +36,21 @@ public class SkeletonApplication {
 		return (args) -> {
 			// save a few toys
 			repository.save(new Toy("NERF N-Strike Elite Delta Power", 429.0,
-					Files.readAllBytes(Paths.get("src/main/java/se/kth/sda6/skeleton/toys/images/Colorful_Cupcakes_Pussel_500_Delar.jpg"))));
+					"toy_images/NERF_N_Strike_Elite_Delta_Power.jpg"));
 			repository.save(new Toy("Monopol: Cheater’s Edition SE", 299.0,
-					Files.readAllBytes(Paths.get("src/main/java/se/kth/sda6/skeleton/toys/images/Monopoly_Cheaters_Edition_SE.jpg"))));
+					"toy_images/Monopoly_Cheaters_Edition_SE.jpg"));
 			repository.save(new Toy("Cruiser 16\" Cykel Gul", 1699.0,
-					Files.readAllBytes(Paths.get("src/main/java/se/kth/sda6/skeleton/toys/images/Cruiser_16_Cykel_Gul.jpg"))));
+					"toy_images/Cruiser_16_Cykel_Gul.jpg"));
 			repository.save(new Toy("Colorful Cupcakes Pussel 500 Delar", 199.0,
-					Files.readAllBytes(Paths.get("src/main/java/se/kth/sda6/skeleton/toys/images/Colorful_Cupcakes_Pussel_500_Delar.jpg"))));
-			repository.save(new Toy("Jätte Plockepinn", 199.0, null));
-			repository.save(new Toy("LEGO® Star Wars™ Action Battle Hoth™ Generator Attack", 257.0, null));
-			repository.save(new Toy("Sparkcykel Classic Big Wheel Vit", 2199.0, null));
-			repository.save(new Toy("Fab Lab Face Tattoo Klistertatueringar", 199.0, null));
+					"toy_images/Colorful_Cupcakes_Pussel_500_Delar.jpg"));
+			repository.save(new Toy("Jätte Plockepinn", 199.0,
+					"toy_images/Jatte_Plockepinn.jpg"));
+			repository.save(new Toy("LEGO® Star Wars™ Action Battle Hoth™ Generator Attack", 257.0,
+					"toy_images/LEGO_Star_Wars_Action_Battle_Hoth.jpg"));
+			repository.save(new Toy("Sparkcykel Classic Big Wheel Vit", 2199.0,
+					"toy_images/Sparkcykel_Classic_Big_Wheel_Vit.jpg"));
+			repository.save(new Toy("Fab Lab Face Tattoo Klistertatueringar", 199.0,
+					"toy_images/Fab_Lab_Face_Tattoo.jpg"));
 		};
 	}
 

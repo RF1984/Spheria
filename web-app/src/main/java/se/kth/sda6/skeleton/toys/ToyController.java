@@ -16,7 +16,9 @@ public class ToyController {
     private ToyService toyService;
 
     @GetMapping("")
-    public List<Toy> getAllToys(){
+    public List<Toy> getAllToys(@RequestParam(required = false) String name){
+        if (name != null){
+            return toyService.getByName(name);}
         return toyService.getAll();
     }
 

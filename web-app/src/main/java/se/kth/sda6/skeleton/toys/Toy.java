@@ -19,7 +19,7 @@ public class Toy {
     private double toyPrice;
 
     @Column(name = "toyPhoto")
-    private byte[] toyPhoto;
+    private String toyPhoto;
 
     //@ManyToOne()
     //private User user;
@@ -35,7 +35,7 @@ public class Toy {
         this.user = user;
     }*/
 
-    public Toy(String toyName, double toyPrice, byte[] toyPhoto) {
+    public Toy(String toyName, double toyPrice, String toyPhoto) {
         this.toyName = toyName;
         this.toyPrice = toyPrice;
         //this.user = user;
@@ -66,11 +66,11 @@ public class Toy {
         this.toyPrice = toyPrice;
     }
 
-    public byte[] getToy_Photo() {
+    public String getToy_Photo() {
         return toyPhoto;
     }
 
-    public void setToy_Photo(byte[] toyPhoto) {
+    public void setToy_Photo(String toyPhoto) {
         this.toyPhoto = toyPhoto;
     }
 }
