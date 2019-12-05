@@ -18,6 +18,9 @@ class ToysApi {
     deleteToy(id) {
         return Api.delete('/toys/'+id);
     }
+    buyToy(id) {
+        return Api.post('/toys/'+id+'/buy');
+    }
 }
 
 export default new ToysApi();

@@ -16,7 +16,7 @@ public class Toy {
     private String toyName;
 
     @Column(name = "toyPrice")
-    private double toyPrice;
+    private int toyPrice;
 
     @Column(name = "toyPhoto")
     private String toyPhoto;
@@ -35,7 +35,7 @@ public class Toy {
         this.user = user;
     }*/
 
-    public Toy(String toyName, double toyPrice, String toyPhoto) {
+    public Toy(String toyName, int toyPrice, String toyPhoto) {
         this.toyName = toyName;
         this.toyPrice = toyPrice;
         //this.user = user;
@@ -58,11 +58,11 @@ public class Toy {
         this.toyName = toyName;
     }
 
-    public double getToy_Price() {
+    public int getToy_Price() {
         return toyPrice;
     }
 
-    public void setToy_Price(double toyPrice) {
+    public void setToy_Price(int toyPrice) {
         this.toyPrice = toyPrice;
     }
 

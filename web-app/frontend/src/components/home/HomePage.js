@@ -25,7 +25,7 @@ class HomePage extends Component {
                 <img src="spinning-top.svg" class="rounded float-left" width="90" height="90"alt="logo"/>
                 <img src="parenthood.svg" class="rounded float-right" width="90" height="90"alt="logo"/>
                 <p>
-                    Balance: { this.state.user ? this.state.user.balance : "Loading..." }
+                    Balance: { this.state.user ? this.state.user.balance+" SEK": "Loading..." }
                 </p>
                 <div>
                 <center>       
