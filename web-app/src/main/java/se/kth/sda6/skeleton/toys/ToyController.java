@@ -15,8 +15,10 @@ public class ToyController {
     @Autowired
     private ToyService toyService;
 
-    /*@GetMapping("")
-    public List<Toy> getAllToys(){
+   /* @GetMapping("")
+    public List<Toy> getAllToys(@RequestParam(required = false) String name){
+        if (name != null){
+            return toyService.getByName(name);}
         return toyService.getAll();
     }
 
