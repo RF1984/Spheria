@@ -2,6 +2,7 @@ import React from 'react';
 import './Popup.css';
 import ToysApi from '../../api/ToysApi';
 import Convert from "./Curency";
+import UserApi from '../../api/UserApi'
 
 class SearchItem extends React.Component {
 
@@ -11,17 +12,26 @@ class SearchItem extends React.Component {
         this.state = {
             item: props.item,
             id: props.id,
-            close: props.close
+            close: props.close,
+            user: null,
+
         };
     }
+    async componentDidMount(){
+        window.userApi = UserApi
+       const response = await UserApi.getCurrentUser();
 
-    // componentDidMount() {
+       this.setState({
+           user: response.data,
+       })
+       
+    }
 
-    //     ToysApi.getToyById(this.state.id)
-    //         .then(({ data }) => this.setState({ item: data, fetching: false }))
-    //         .catch(err => console.error(err));
+     async handleSubmit()  {
+        await ToysApi.buyToy(this.state.item.id)
 
-    // }
+        window.location.reload();
+    }
 
     render() {
         const { item, close } = this.state;
@@ -38,6 +48,9 @@ class SearchItem extends React.Component {
                     Price: {item.toy_Price}
                 <div>
                     <Convert price ={item.toy_Price}/>
+                </div>
+                <div>
+                    <button className="btn btn-primary" onClick={() => this.handleSubmit()}>Add Item</button>
                 </div>
                 </div>
             )
