@@ -46,7 +46,7 @@ class Navbar extends React.Component {
                     <div class="nav-item dropdown ml-auto">
                              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                             <i class="fas fa-user"></i> {this.state.username} </a>
+                             <i class="fa fa-user"></i> {this.state.username} </a>
                             </div>
                     
     
