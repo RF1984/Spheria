@@ -72,7 +72,6 @@ public class ToyController {
         User user = userService.findUserByEmail(email);
         Toy toy = toyService.getByID(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-        user.setBalance(2000);
         if (user.getBalance() >= toy.getToy_Price()) {
 
             int newBalance = user.getBalance() - toy.getToy_Price();
@@ -81,6 +80,7 @@ public class ToyController {
               return "Ok";
         }
         else throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+
 
     }
 
