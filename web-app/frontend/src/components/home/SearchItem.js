@@ -2,18 +2,22 @@ import React from 'react';
 import './Popup.css';
 import ToysApi from '../../api/ToysApi';
 import Convert from "./Curency";
-import UserApi from '../../api/UserApi'
+import UserApi from '../../api/UserApi';
+import { Link } from "react-router-dom";
 
 class SearchItem extends React.Component {
 
     constructor(props) {
         super(props);
 
+        console.log(props);
         this.state = {
             item: props.item,
             id: props.id,
             close: props.close,
             user: null,
+            updateSomething : false,
+            status: null,
 
         };
     }
@@ -28,13 +32,16 @@ class SearchItem extends React.Component {
     }
 
      async handleSubmit()  {
+        try{
         await ToysApi.buyToy(this.state.item.id)
-
         window.location.reload();
+    }catch (e) {
+        this.setState({updateSomething : true});
+    }
     }
 
     render() {
-        const { item, close } = this.state;
+        const { item, close, updateSomething } = this.state;
             return (
                 <div className="modal">
                     <a className="close" onClick={close}>
@@ -50,8 +57,11 @@ class SearchItem extends React.Component {
                     <Convert price ={item.toy_Price}/>
                 </div>
                 <div>
-                    <button className="btn btn-primary" onClick={() => this.handleSubmit()}>Add Item</button>
+                    <button className="btn btn-primary" onClick={() => this.handleSubmit()}>Buy</button>
                 </div>
+                {
+                        updateSomething ? <div>there is not enough money, try to do some <Link to="/chat" className="nav-Link">Tasks</Link> </div> : <div></div>
+                    }
                 </div>
             )
     }
