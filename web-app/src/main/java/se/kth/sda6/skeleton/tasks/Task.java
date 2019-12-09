@@ -39,6 +39,7 @@ public class Task {
 
     public Task (String taskName, Double taskValue, User user) {
         this.taskName = taskName;
+        this.taskValue = taskValue;
         this.user = user;
     }
 
@@ -50,17 +51,17 @@ public class Task {
         this.id = id;
     }
 
-    public String getTask() {
+    public String getTaskName() {
         return taskName;
     }
 
-    public void setTask(String body) {
+    public void setTaskName(String taskName) {
         this.taskName = taskName;
     }
 
-    public double getValue() {return taskValue;}
+    public double getTaskValue() {return taskValue;}
 
-    public void setValue (double taskValue) { this.taskValue = taskValue; }
+    public void setTaskValue (double taskValue) { this.taskValue = taskValue; }
 
 }
 
