@@ -28,10 +28,10 @@ class Navbar extends React.Component {
                                     Home
                                 </Link>
                             </li>
-    
+                             {/*changed the name here,the page was not working */}
                             <li className="nav-item">
-                                <Link to="/posts" className="nav-link">
-                                    Link1
+                                <Link to="/tasks" className="nav-link">
+                                    Tasks
                                 </Link>
                             </li>
     

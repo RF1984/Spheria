@@ -5,7 +5,6 @@ import {
     Route,
 } from "react-router-dom";
 
-// Import custom styles for our application
 import './App.css';
 
 import Auth from './services/Auth';
@@ -16,7 +15,7 @@ import Footer from './components/layout/Footer';
 // Import pages
 import LoginPage from "./components/auth/LoginPage";
 import HomePage from './components/home/HomePage';
-import PostsPage from "./components/posts/PostsPage";
+import TaskPage from "./components/tasks/TaskPage";
 import ChatPage from './components/chat/ChatPage';
  
 
@@ -31,8 +30,8 @@ function App() {
 
                 <div className="container mt-5">
                     <Switch>
-                        <Route path="/posts">
-                            <PostsPage/>
+                        <Route path="/tasks">
+                            <TaskPage/>
                         </Route>
 
 
