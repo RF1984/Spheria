@@ -1,7 +1,6 @@
 import React from "react";
 import Axios from "axios";
-import MessagePopUp from "./MessagePopUp";
-import { equal } from "assert";
+
 class Convert extends React.Component {
     state = {
         rates: null,
