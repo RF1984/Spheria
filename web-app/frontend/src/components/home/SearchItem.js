@@ -52,7 +52,10 @@ class SearchItem extends React.Component {
                         <img width="50px" height="50px " src={item.toy_Photo}
                             alt={item.toy_Name} height="100" width="100"></img> {item.toy_Name}
                     </div>
-                    Price: {item.toy_Price}
+                    <h5>
+                    Price: {item.toy_Price} SEK
+                    </h5>
+                    <br/>
                 <div>
                     <Convert price ={item.toy_Price}/>
                 </div>

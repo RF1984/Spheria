@@ -24,7 +24,7 @@ class LoginPage extends Component {
                 <div className="container">
                     <div className="row mt-4">
                         <div className="col-md-6 ">
-                            <p className="big-p text-center">Wellcome to the world of toys!</p>
+                            <p className="big-p text-center">Welcome to the world of toys!</p>
                             <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qIZ2lua9aQA" allowfullscreen></iframe>
                             </div>
