@@ -24,9 +24,7 @@ class HomePage extends Component {
                 <br/>
                 <img src="spinning-top.svg" class="rounded float-left" width="90" height="90"alt="logo"/>
                 <img src="parenthood.svg" class="rounded float-right" width="90" height="90"alt="logo"/>
-                <p>
-                    Balance: { this.state.user ? this.state.user.balance : "Loading..." }
-                </p>
+                
                 <div>
                 <center>       
                     <p className="big-p">

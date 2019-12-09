@@ -4,19 +4,19 @@ import UserApi from "../../api/UserApi";
 
 class Navbar extends React.Component {
     state = {
-        username: "",
+        user: "",
     }
     async componentDidMount() {
         const response = await UserApi.getCurrentUser()
 
         this.setState({
-            username: response.data.name
+            user: response.data
         })
     }
     render() {
         return (
             <nav className="navbar navbar-expand-sm navbar-light bg-warning text-dark">
-                <img src="logo60.png" alt="logo"/>
+                <img src="abc.svg" width="90px" alt="logo" />
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -28,10 +28,10 @@ class Navbar extends React.Component {
                                     Home
                                 </Link>
                             </li>
-    
+                             {/*changed the name here,the page was not working */}
                             <li className="nav-item">
-                                <Link to="/posts" className="nav-link">
-                                    Link1
+                                <Link to="/tasks" className="nav-link">
+                                    Tasks
                                 </Link>
                             </li>
     
@@ -44,9 +44,12 @@ class Navbar extends React.Component {
     
                 
                     <div class="nav-item dropdown ml-auto">
-                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                             <a class="nav-link" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                             <i class="fa fa-user"></i> {this.state.username} </a>
+                             <i class="fa fa-child icon-7x"></i> {this.state.user.name}</a>
+                            </div>
+                            <div>
+                                Balance: { this.state.user ? this.state.user.balance+" SEK": "Loading..." }
                             </div>
                     
     

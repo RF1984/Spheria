@@ -43,9 +43,8 @@ p.big-p::first-letter {
   font-size: 50pt;
   font-weight: 600;
 }
-
 .card {
-  background-color: white;
+  background-color: red;
   
 }
 

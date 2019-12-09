@@ -11,6 +11,7 @@ class TasksApi {
 
     createTask(task) {
         return Api.post('/tasks', task);
+
     }
 
     updateTask(task) {

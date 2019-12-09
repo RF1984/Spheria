@@ -29,25 +29,25 @@ public class User {
     private String name;
 
     @Column(name = "balance")
-    private double balance;
+    private int balance;
 
     // Hibernate needs a default constructor to function
     public User() {
-       balance = 0.0;
+       balance = 2000;
     }
 
     public User(@Email(message = "Invalid email address! Please provide a valid email address") @NotEmpty(message = "Please provide an email address") String email, @Length(min = 5, max = 100, message = "Password length most be between 5-100 characters") String password, @Length(min = 3, max = 100, message = "Name must be between 3-100 characters") String name) {
         this.email = email;
         this.password = password;
         this.name = name;
-        balance = 0.0;
+        balance = 2000;
     }
 
-    public double getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(int balance) {
         this.balance = balance;
     }
 

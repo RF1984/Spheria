@@ -42,7 +42,8 @@ public class TaskController {
         String email = authService.getLoggedInUserEmail(authHeader);
         User user = userService.findUserByEmail(email);
         newTask.setUser(user);
-        return taskService.create(newTask);
+        Task task = taskService.create(newTask);
+        return task;
     }
     
 
