@@ -18,6 +18,7 @@
     font-size: 18px;
     text-align: center;
     padding: 5px;
+    background: yellow;
   }
   .modal > .content {
     width: 100%;
