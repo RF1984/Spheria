@@ -1,6 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import { equal } from "assert";
+import './Curency.css'
 class Convert extends React.Component {
     state = {
         rates: null,
@@ -37,7 +38,7 @@ const Message4 = {Currency: "RON", Min: 180, Max: 220, Message: "and you can pay
 const Message5 = {Currency: "PLN", Min: 180, Max: 220, Message: "and you can buy 35 liters of milk with it?"};
 
 const Message6  = {Currency: "RUB", Min: 250, Max: 300, Message: "and you can buy 6 cinema tickets with it?"};
-const Message7  = {Currency: "INR", Min: 250, Max: 300, Message: "and you can pay internet for 3 months with it?"};
+const Message7  = {Currency: "INR", Min: 250, Max: 300, Message: "and you can pay your home internet for 3 months with it?"};
 const Message8  = {Currency: "ILS", Min: 250, Max: 300, Message: "and you can buy lunch for 4 people with it?"};
 const Message9 = {Currency: "RON", Min: 250, Max: 300, Message: "and you can buy dinner for 3 people with it?"};
 const Message10 = {Currency: "PLN", Min: 250, Max: 300, Message: "and you can buy the public transportation pass for 1 month with it?"};
@@ -74,9 +75,10 @@ render() {
     const {randomCurrency} = this.state
     console.log(this.state)
     const convertedPrice= this.state.rates ? this.props.price * this.state.rates[randomCurrency.code] : "";
-    return <div>
-        {this.state.rates ? <div>Did you know that in {randomCurrency.country} this is worth {convertedPrice.toFixed(0)} {randomCurrency.text} </div> : <div>working..</div>}
-        <div>{this.getMessage(randomCurrency.code)}</div>
+    return <div className="message-card">
+        <h1 className="message-text">
+        {this.state.rates ? <div>Did you know that in <b><font color="red">{randomCurrency.country}</font></b> this is worth <b><font color="green">{convertedPrice.toFixed(0)} {randomCurrency.text} </font></b> {this.getMessage(randomCurrency.code)} </div> : <div>working..</div>}
+        </h1>
     </div>
     
 }
