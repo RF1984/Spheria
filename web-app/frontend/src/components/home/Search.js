@@ -60,15 +60,16 @@ class Search extends React.Component {
                     </div>
 
                     <div className="search-container">
-                        <ul>
+                        <ul className="ul rounded">
                             {
                                 this.state.results.map(result =>
-                                    <li title="Click to view product">
-                                        <Popup modal trigger={<div className="search-item">
+                                    <li className="list shadow p-3 mb-5 bg-white rounded" title="Click to view product">
+                                        <Popup modal trigger={<div className="search-item rounded">
                                             <a>
                                                 <img width="50px" height="50px " src={result.toy_Photo}
-                                                    alt={result.toy_Name} height="100" width="100"></img> {result.toy_Name}
+                                                    alt={result.toy_Name} height="100" width="100"></img> {result.toy_Name} 
                                             </a>
+                                            <a className="price shadow p-3 mb-5 bg-warning rounded float-right">Price: {result.toy_Price} SEK</a>
                                         </div>}>
                                             {close => <SearchItem close={close} item={result}/>}
                                         </Popup>
