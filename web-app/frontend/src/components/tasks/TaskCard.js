@@ -2,6 +2,7 @@
 //import CommentSection from "../comment/CommentSection"
 //import CommentForm from "../comment/CommentForm"
 import React, { Component } from "react";
+import TasksApi from "../../api/TasksApi";
 
 
 /*this is the original code:
@@ -20,6 +21,9 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
             this.state = {
                 taskName: '',
                 taskValue: '',
+                isDoneComponent: false,
+
+
             }
         };
         // changing the state
@@ -27,7 +31,6 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
            e.preventDefault();
            this.setState({
                 taskName: e.target.value
-
             });
         };
         // changing the value
@@ -37,9 +40,18 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                 taskValue: e.target.value
             });
         };
-        render() {
-                const { taskName, taskValue } = this.state;
+        async setDone(id){
+           // window.taskApi = TasksApi
+            await TasksApi.addTaskValue(id);
+            window.updateBalance();
+            this.setState({
+                isDoneComponent: true,
+            })
 
+        }
+        render() {
+                const { taskName, taskValue,isDoneComponent} = this.state;
+                
                 return (
                     <div className="card" style={cardStyle}>
                           <div className="card-body" >
@@ -56,6 +68,11 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                            value={this.props.task.taskValue}
                            style={selectStyle}></input>
                             </div>
+                            {!isDoneComponent ? <div>
+                            <button type="button" class="btn btn-success" onClick={() => this.setDone(this.props.task.id)}>Done</button></div> 
+                            : <div></div>
+                             }
+
                      </div>
 
                       /* original code:

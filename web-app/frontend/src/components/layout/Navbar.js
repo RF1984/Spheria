@@ -12,6 +12,13 @@ class Navbar extends React.Component {
         this.setState({
             user: response.data
         })
+        window.updateBalance = async ()=>{
+            const response = await UserApi.getCurrentUser()
+
+        this.setState({
+            user: response.data
+        })
+        } 
     }
     render() {
         return (
