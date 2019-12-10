@@ -27,7 +27,7 @@ class TaskPage extends React.Component {
 
             const newTask = this.state.tasks.concat(task);
 
-            console.log(newTask);
+            //console.log(newTask);
 
             this.setState({
                 tasks: newTask,
@@ -54,6 +54,7 @@ class TaskPage extends React.Component {
         const resu = await UserApi.getCurrentUser();
         const rest = await TasksApi.getTasksByUserId(resu.data.id)
          this.setState({tasks: rest.data})
+         //console.log(this.state.tasks)
     }
 
     render() {
@@ -91,7 +92,9 @@ class TaskPage extends React.Component {
                             <div className="row">
                                     {tasks.map(task =>
                                         <TaskCard key={task.id} task={task}/>
+                                        
                                     )}
+                                    
                             </div>
 
             </div>
