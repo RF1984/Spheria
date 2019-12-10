@@ -38,7 +38,7 @@ function RegisterForm({onSubmit}) {
                     </div>
 
                     <div className="form-group">
-                    <img src="parenthood_1.svg" class="rounded float-right" width="50" height="50"alt="logo"/>
+                    <img src="parenthood1.svg" class="rounded float-right" width="50" height="50"alt="logo"/>
                         <button 
                             className="btn btn-success"
                             onClick={e => onSubmit({name, email, password})}>
