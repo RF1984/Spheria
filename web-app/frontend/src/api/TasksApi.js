@@ -21,6 +21,11 @@ class TasksApi {
     deleteTask(id) {
         return Api.delete('/tasks/'+id);
     }
+
+    addTaskValue(id) {
+        return Api.put('/tasks/'+id+'/done')
+    }
+
 }
 
 export default new TasksApi();

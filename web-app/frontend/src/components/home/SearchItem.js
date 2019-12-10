@@ -18,6 +18,7 @@ class SearchItem extends React.Component {
             user: null,
             updateSomething : false,
             status: null,
+            otherPopup: false,
 
         };
     }
@@ -34,14 +35,16 @@ class SearchItem extends React.Component {
      async handleSubmit()  {
         try{
         await ToysApi.buyToy(this.state.item.id)
-        window.location.reload();
+        window.updateBalance();
+        //this.props.close();
+        this.setState({otherPopup : true});
     }catch (e) {
         this.setState({updateSomething : true});
     }
     }
 
     render() {
-        const { item, close, updateSomething } = this.state;
+        const { item, close, updateSomething, otherPopup } = this.state;
             return (
                 <div className="modal">
                     <a className="close" onClick={close}>
@@ -64,9 +67,13 @@ class SearchItem extends React.Component {
                     <button className="btn btn-primary" onClick={() => this.handleSubmit()}>Buy</button>
                 </div>
                 {
-                        updateSomething ? <div>there is not enough money, try to do some <Link to="/chat" className="nav-Link">Tasks</Link> </div> : <div></div>
+                        updateSomething ? <div>there is not enough money, try to do some <Link to="/tasks" className="nav-Link">Tasks</Link> </div> : <div></div>
+                    }
+                    {
+                        otherPopup ? <div>Congratulations! You just got a new toy!!</div> : <div></div>
                     }
                 </div>
+                
             )
     }
 }

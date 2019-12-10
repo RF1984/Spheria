@@ -12,6 +12,13 @@ class Navbar extends React.Component {
         this.setState({
             user: response.data
         })
+        window.updateBalance = async ()=>{
+            const response = await UserApi.getCurrentUser()
+
+        this.setState({
+            user: response.data
+        })
+        } 
     }
     render() {
         return (
@@ -42,7 +49,16 @@ class Navbar extends React.Component {
                             <Link to="/chat" className="nav-link">
                                 Link2
                                 </Link>
-                        </li>
+
+                        
+
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/exchange" className="nav-link">
+                                    Exchange toys
+                                </Link>
+                            </li>
+
                     </ul>
 
 
