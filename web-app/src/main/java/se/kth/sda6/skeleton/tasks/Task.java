@@ -23,6 +23,9 @@ public class Task {
     @Column(name = "value")
     private int taskValue;
 
+    @Column(name = "done")
+    private boolean isDone;
+
     @ManyToOne ()
     private User user;
 
@@ -34,12 +37,13 @@ public class Task {
         this.user = user;
     }
 
-    public Task() {
+    public Task() { this.isDone = false;
     }
 
-    public Task (String taskName, int taskValue, User user) {
+    public Task (String taskName, int taskValue, boolean isDone, User user) {
         this.taskName = taskName;
         this.taskValue = taskValue;
+        this.isDone = false;
         this.user = user;
     }
 
@@ -63,5 +67,12 @@ public class Task {
 
     public void setTaskValue (int taskValue) { this.taskValue = taskValue; }
 
+    public boolean isDone() {
+        return isDone;
+    }
+
+    public void setDone(boolean isDone) {
+        this.isDone = isDone;
+    }
 }
 

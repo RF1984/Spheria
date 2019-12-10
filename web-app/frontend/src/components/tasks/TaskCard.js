@@ -21,7 +21,7 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
             this.state = {
                 taskName: '',
                 taskValue: '',
-                isDoneComponent: false,
+                isDoneComponent: this.props.task.done,
 
 
             }
@@ -42,11 +42,13 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
         };
         async setDone(id){
            // window.taskApi = TasksApi
-            await TasksApi.addTaskValue(id);
-            window.updateBalance();
+           const response =  await TasksApi.addTaskValue(id);
+            //window.updateBalance();
             this.setState({
-                isDoneComponent: true,
+                isDoneComponent: response.data,
             })
+            //console.log(this.state.isDoneComponent)
+            window.updateBalance();
 
         }
         render() {
@@ -67,11 +69,13 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                            onChange={this.setTaskValue} className="form-control"
                            value={this.props.task.taskValue}
                            style={selectStyle}></input>
-                            </div>
-                            {!isDoneComponent ? <div>
+                           {!(isDoneComponent) ? <div>
                             <button type="button" class="btn btn-success" onClick={() => this.setDone(this.props.task.id)}>Done</button></div> 
                             : <div></div>
                              }
+                            </div>
+                            
+                            
 
                      </div>
 
