@@ -39,7 +39,7 @@ import React from "react";
                     <label htmlFor="type"> Value:</label>
 
 
-                    <input type="text" value={taskValue}
+                    <input type="number" value={taskValue}
                     onChange={e => setTaskValue(e.target.value)}
                     className="form-control">
                     </input>

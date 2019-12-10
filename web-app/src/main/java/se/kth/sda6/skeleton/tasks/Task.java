@@ -21,7 +21,7 @@ public class Task {
     private String taskName;
 
     @Column(name = "value")
-    private double taskValue;
+    private int taskValue;
 
     @ManyToOne ()
     private User user;
@@ -37,7 +37,7 @@ public class Task {
     public Task() {
     }
 
-    public Task (String taskName, Double taskValue, User user) {
+    public Task (String taskName, int taskValue, User user) {
         this.taskName = taskName;
         this.taskValue = taskValue;
         this.user = user;
@@ -59,9 +59,9 @@ public class Task {
         this.taskName = taskName;
     }
 
-    public double getTaskValue() {return taskValue;}
+    public int getTaskValue() {return taskValue;}
 
-    public void setTaskValue (double taskValue) { this.taskValue = taskValue; }
+    public void setTaskValue (int taskValue) { this.taskValue = taskValue; }
 
 }
 

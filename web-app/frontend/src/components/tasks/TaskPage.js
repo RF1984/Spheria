@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TaskForm from "./TaskForm";
 import TasksApi from "../../api/TasksApi";
 import TaskCard from "./TaskCard";
+import UserApi from "../../api/UserApi";
 
 
 
@@ -49,10 +50,10 @@ class TaskPage extends React.Component {
     }*/
 
 
-    componentDidMount() {
-        TasksApi.getAllTasks()
-            .then(({data}) => this.setState({tasks: data}))
-            .catch(err => console.error(err));
+    async componentDidMount() {
+        const resu = await UserApi.getCurrentUser();
+        const rest = await TasksApi.getTasksByUserId(resu.data.id)
+         this.setState({tasks: rest.data})
     }
 
     render() {
