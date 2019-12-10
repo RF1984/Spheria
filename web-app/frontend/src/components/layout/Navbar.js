@@ -40,6 +40,11 @@ class Navbar extends React.Component {
                                     Link2
                                 </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to="/exchange" className="nav-link">
+                                    Exchange toys
+                                </Link>
+                            </li>
                     </ul>
     
                 

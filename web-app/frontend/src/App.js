@@ -17,6 +17,7 @@ import LoginPage from "./components/auth/LoginPage";
 import HomePage from './components/home/HomePage';
 import TaskPage from "./components/tasks/TaskPage";
 import ChatPage from './components/chat/ChatPage';
+import ExchangePage from './components/exchange/ExchangePage';
  
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
 
                         <Route path="/chat">
                             <ChatPage/>
+                        </Route>
+                        
+                        <Route path="/exchange">
+                            <ExchangePage/>
                         </Route>
 
                         <Route path="/">
