@@ -56,24 +56,29 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                 
                 return (
                     <div className="card" style={cardStyle}>
-                          <div className="card-body" >
+                          <div className="card-body bg-warning rounded" >
 
-                           <label htmlFor="type"> Task name:</label>
-                           <input disabled type="text"
-                           onChange={this.setTaskName} className="form-control"
-                           value={this.props.task.taskName}
-                           style={selectStyle} placeholder="no task name"></input>
+                                <label htmlFor="type"> Task name:</label>
+                                <input disabled type="text"
+                                onChange={this.setTaskName} className="form-control"
+                                value={this.props.task.taskName}
+                                style={selectStyle} placeholder="no task name"></input>
 
-                           <label htmlFor="type">Value: </label>
-                           <input disabled type="text"
-                           onChange={this.setTaskValue} className="form-control"
-                           value={this.props.task.taskValue}
-                           style={selectStyle}></input>
-                           {!(isDoneComponent) ? <div>
-                            <button type="button" class="btn btn-success" onClick={() => this.setDone(this.props.task.id)}>Done</button></div> 
+                                 <label htmlFor="type">Value: </label>
+                                 <input disabled type="text"
+                                 onChange={this.setTaskValue} className="form-control"
+                                 value={this.props.task.taskValue}
+                                 style={selectStyle}></input>
+                                 <img src="strategy.svg" class="rounded float-right " width="50" height="50"alt="logo"/>
+                            </div>
+                               {!(isDoneComponent) ?
+
+                                <button type="button" class="btn btn-success" onClick={() => this.setDone(this.props.task.id)}>Done
+                                </button>
+
                             : <div></div>
                              }
-                            </div>
+
                             
                             
 
@@ -106,8 +111,9 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
     }
 
     const cardStyle = {
-        width: '80%',
-        margin: 'auto'
+        width: '40%',
+         marginRight: '10px',
+         marginBottom: '10px'
     }
 
 

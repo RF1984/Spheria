@@ -71,33 +71,45 @@ class TaskPage extends React.Component {
                     <PostCard key={post.id} post={post} onDeleteClick={() => this.deletePost(post)}/>
                 )}
             </div> */
-            <div>
-                            <div className="container">
-                            <h2>Welcome to our task page</h2>
-                            <button type="button"
-                                    className="btn btn-outline-secondary btn-lg"
-                                    style={buttonStyle}
-                                    data-toggle="modal"
-                                    data-target={"#taskFormModal"}> <i className="fa fa-plus"></i>
-                                </button>
-                                &nbsp;&nbsp;
-                             <button type="submit" disabled
-                                    className="btn btn-danger btn-lg"
-                                    style={buttonStyle}> Create a task!
-                                 </button>
-                              <Modal id="taskFormModal" title="Create a task">
-                                    <TaskForm onClickCreateTask = {(taskData) => this.onClickCreateTask(taskData)} />
-                                </Modal>
-                            </div>
-                            <div className="row">
-                                    {tasks.map(task =>
-                                        <TaskCard key={task.id} task={task}/>
-                                        
-                                    )}
-                                    
-                            </div>
+            <div id="main-group">
+                  <div className="container">
+                       <div>
+                        <br/>
+                         <img src="spinning-top.svg" class="rounded float-left" width="90" height="90"alt="logo"/>
+                         <img src="parenthood.svg" class="rounded float-right" width="90" height="90"alt="logo"/>
 
-            </div>
+                       </div>
+                  <div>
+                         <center>
+                         <p className="big-p">
+                          Welcome to our task page!
+                         </p>
+                  <div>
+                        </div>
+                       </center>
+                  </div>
+                  <button type="button"
+                  className="btn btn-outline-secondary btn-lg"
+                  style={buttonStyle}
+                  data-toggle="modal"
+                  data-target={"#taskFormModal"}> <i className="fa fa-plus"></i>
+                   </button>
+                   &nbsp;&nbsp;
+                    <button type="submit" disabled
+                    className="btn btn-secondary btn-lg"
+                    style={buttonStyle}> Create a task
+                     </button>
+                     <Modal id="taskFormModal" title="Create a task">
+                      <TaskForm onClickCreateTask = {(taskData) => this.onClickCreateTask(taskData)} />
+                      </Modal>
+                     </div>
+                      <div className="row">
+                       {tasks.map(task =>
+                        <TaskCard key={task.id} task={task}/>
+                        )}
+                       </div>
+
+                   </div>
 
         );
     }
@@ -105,18 +117,21 @@ class TaskPage extends React.Component {
 
 const Modal = ({ children, id, title }) =>
     <div id={id} className="modal fade" role="dialog" data-backdrop="false">
-        <div className="modal-dialog">
-            <div className="modal-content">
-                <div className="modal-header">
-                    <h4 className="modal-title">{title}</h4>
-                    <button type="button" className="close" data-dismiss="modal"> &times;
-                                                    </button>
-                </div>
-                <div className="modal-body">
-                    {children}
-                </div>
-            </div>
+       <div className="modal-dialog">
+                   <div className="modal-content bg-warning rounded">
+                       <div className="modal-header bg-warning rounded">
+                           <h4 className="modal-title">{title}</h4>
+
+                           <button type="button" className="close" data-dismiss="modal"> &times;
+                           </button>
+                           <img src="parenthood1.svg" class="rounded float-right " width="50" height="50"alt="logo"/>
+                       </div>
+                       <div className="modal-body">
+                           {children}
+                       </div>
+                   </div>
         </div>
+
     </div>
 
 

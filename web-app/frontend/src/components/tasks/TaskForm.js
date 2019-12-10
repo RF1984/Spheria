@@ -44,7 +44,7 @@ import React from "react";
                     className="form-control">
                     </input>
                 </div>
-                <button type="submit" className="btn btn-primary" data-dismiss="modal" onClick={handleSubmit}>Create
+                <button type="submit" className="btn btn-success" data-dismiss="modal" onClick={handleSubmit}>Create
                 </button>
         </div>
 //
