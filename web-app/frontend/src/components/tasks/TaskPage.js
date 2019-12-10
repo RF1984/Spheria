@@ -71,7 +71,7 @@ class TaskPage extends React.Component {
                     <PostCard key={post.id} post={post} onDeleteClick={() => this.deletePost(post)}/>
                 )}
             </div> */
-            <div id="main-group">
+            <div>
                             <div className="container">
                             <h2>Welcome to our task page</h2>
                             <button type="button"
@@ -83,7 +83,7 @@ class TaskPage extends React.Component {
                                 &nbsp;&nbsp;
                              <button type="submit" disabled
                                     className="btn btn-danger btn-lg"
-                                    style={buttonStyle}> Create a task by clicking the plus
+                                    style={buttonStyle}> Create a task!
                                  </button>
                               <Modal id="taskFormModal" title="Create a task">
                                     <TaskForm onClickCreateTask = {(taskData) => this.onClickCreateTask(taskData)} />
