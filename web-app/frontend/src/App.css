@@ -28,7 +28,13 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.nav-item {
+  font-size: 15pt;
+  
+}
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
 .App-link {
   color: #09d3ac;
 }

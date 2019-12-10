@@ -27,6 +27,8 @@ function App() {
   const loggedInRouter = (
             <Router>
                 <Navbar onLogout={() => Auth.logout()} />
+
+               
                 
 
                 <div className="container mt-5">
@@ -50,6 +52,9 @@ function App() {
                     </Switch>
                     
                 </div>
+
+                    
+                
                 <div>
                 <Footer/>
                 </div>
