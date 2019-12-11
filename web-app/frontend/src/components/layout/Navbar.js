@@ -44,20 +44,18 @@ class Navbar extends React.Component {
                                 Tasks
                                 </Link>
                         </li>
+                        <li className="nav-item">
+                        <Link to="/exchange" className="nav-link">
+                            Exchange toys
+                            </Link>
+                            </li>
 
                         <li className="nav-item">
                             <Link to="/chat" className="nav-link">
-                                Link2
-                                </Link>
-
-                        
-
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/exchange" className="nav-link">
-                                    Exchange toys
+                                Parents
                                 </Link>
                             </li>
+
 
                     </ul>
 
