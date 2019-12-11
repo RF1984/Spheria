@@ -81,7 +81,7 @@ render() {
         {this.state.rates ? <div>Did you know that in <b><font color="red">{randomCurrency.country}</font></b> this is worth <b><font color="green">{convertedPrice.toFixed(0)} {randomCurrency.text} </font></b> {this.getMessage(randomCurrency.code)} </div> : <div>working..</div>}
         </h1>
         
-         <img src="speaker.svg" class="rounded float-right" width="80"/>
+         <img src="speaker.svg" class="rounded float-right" width="100"/>
     </div>
     
 }

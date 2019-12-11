@@ -64,7 +64,7 @@ class Navbar extends React.Component {
 
                     <div className="nav-item">
                         <a class="nav-link">
-                        <img src="boy.svg" class="rounded float-left" width="30"/>
+                        <img src="robotLog.svg" class="rounded float-left" width="30"/>
                          {this.state.user.name}</a>
 
                             
