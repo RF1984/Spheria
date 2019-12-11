@@ -62,14 +62,14 @@ class Navbar extends React.Component {
 
                     <div className="nav-item">
                         <a class="nav-link">
-                        <img src="robotLog.svg" class="rounded float-left" width="30"/> &nbsp;&nbsp;
+                        <img src="robotLog.svg" class="rounded float-left" width="40"/> &nbsp;&nbsp;
                          {this.state.user.name}</a>
 
                             
                     </div>
                     <div className="nav-item">
                     <a class="nav-link">
-                    <img src="piggy-bank.svg" class="rounded float-left" width="30" height="30"/> &nbsp;&nbsp;
+                    <img src="piggy-bank.svg" class="rounded float-left" width="40"/> &nbsp;&nbsp;
                        {this.state.user ? this.state.user.balance + " SEK" : "Loading..."} </a>
                     </div>
 

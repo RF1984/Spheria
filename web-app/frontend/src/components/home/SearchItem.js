@@ -62,8 +62,8 @@ class SearchItem extends React.Component {
                     &times;
                     </a>
 
-                <div className="header shadow p-3 mb-5 bg-warning rounded"> {item.toy_Name} </div>
-                <div className="content shadow p-3 mb-5 bg-white rounded">
+                <div className="header shadow-sm p-3 mb-5 bg-warning rounded"> {item.toy_Name} </div>
+                <div className="content shadow-sm p-3 mb-5 bg-white rounded">
                     <img width="50px" height="50px " src={item.toy_Photo}
                         alt={item.toy_Name} height="100" width="100"></img> {item.toy_Name}
                     <a className="price float-right p-3 mb-5 bg-warning rounded">
@@ -71,12 +71,12 @@ class SearchItem extends React.Component {
                     </a>
                 </div>
                 <br></br>
-                <div className="msg shadow p-3 mb-5 bg-white rounded">
+                <div className="msg shadow-sm p-3 mb-5 bg-white rounded">
                     <Convert price={item.toy_Price} />
                 </div>
 
                 <div>
-                    <button className="btn btn-primary" onClick={() => this.handleSubmit()}>Buy</button>
+                    <button className="btn btn-outline-success btn-lg btn-block" onClick={() => this.handleSubmit()}>I want to BUY this toy!</button>
                     
                     {console.log(enoughMoney)}
                 </div>
