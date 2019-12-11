@@ -88,15 +88,27 @@ class TaskPage extends React.Component {
                         </div>
                        </center>
                   </div>
-                  <button type="button"
-                  className="btn btn-outline-secondary btn-lg"
-                  style={buttonStyle}
-                  data-toggle="modal"
-                  data-target={"#taskFormModal"}> <i className="fa fa-plus"></i>
-                   </button>
+                  
                    &nbsp;&nbsp;
-                    <button type="submit" disabled
-                    className="btn btn-secondary btn-lg"
+                   
+                   <div class="alert alert-success" role="alert">
+                   <h4 class="alert-heading">Create a task</h4>
+                   <p>Are You Teaching Kids Responsibility? Create a Simple Task Challenges for your Kids</p>
+                    <hr></hr>
+                    <p class="mb-0">Click plus to create a new task
+                    &nbsp;&nbsp;
+                    <button type="button"
+                    className="btn btn-warning btn-lg"
+                    style={buttonStyle}
+                    data-toggle="modal"
+                    data-target={"#taskFormModal"}> <i className="fa fa-plus"></i>
+                   </button>
+                   </p>
+                    </div>
+
+
+                    <button type="submit" disabled  
+                    className="btn btn-warning btn-lg"
                     style={buttonStyle}> Create a task
                      </button>
                      <Modal id="taskFormModal" title="Create a task">

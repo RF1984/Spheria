@@ -74,6 +74,7 @@ class SearchItem extends React.Component {
                 <div className="msg shadow p-3 mb-5 bg-white rounded">
                     <Convert price={item.toy_Price} />
                 </div>
+
                 <div>
                     <button className="btn btn-primary" onClick={() => this.handleSubmit()}>Buy</button>
                     
