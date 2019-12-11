@@ -68,7 +68,7 @@ class SearchItem extends React.Component {
                         updateSomething ? <div>there is not enough money, try to do some <Link to="/tasks" className="nav-Link">Tasks</Link> </div> : <div></div>
                     }
                     {
-                        otherPopup ? <div><img src="new-product.svg" class="rounded float-left" width="90" height="90"/> <br></br>Congratulations! You just got a new toy!!</div> : <div></div>
+                        otherPopup ? <div> <br></br>Congratulations! You just got a new toy!!</div> : <div></div>
                     }
                 </div>
                 
