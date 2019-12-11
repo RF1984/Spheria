@@ -30,10 +30,10 @@ class LoginPage extends Component {
                             </div>
                         
                             <div class="card-body text-dark bg-warning mb-3 ">
-                            <p>Lorem ipsum dolor amet tumeric food truck vegan 90's raclette pok pok. Paleo hexagon gentrify 
+                            <p className="login">Lorem ipsum dolor amet tumeric food truck vegan 90's raclette pok pok. Paleo hexagon gentrify 
                             gluten-free blue bottle polaroid man braid la croix authentic bicycle rights. Meditation chambray blue bottle, 
                             single-origi coffee fingerstache disrupt lomo af direct trade
-                            Street art vice church-key cornhole health goth, readymade asymmetrical. Fanny pack semiotics fixie blog 
+                            Street art vice church-key cornhole health goth, readymade asymmetrical. Fanny pack! semiotics fixie blog 
                             tousled la croix. Poke salvia tote bag forage you probably haven't heard of them. Aesthetic hell of kogi 
                             bicycle rights. Meditation bicycle rights.
                             Lyft celiac affogato, woke pabst everyday carry coloring book shoreditch post-ironic edison bulb biodiesel 

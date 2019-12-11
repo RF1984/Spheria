@@ -44,4 +44,8 @@ li {
   label.search {
 	  width: 100%;
   }
+
+  a.price {
+	margin-top: 20px;
+  }
  

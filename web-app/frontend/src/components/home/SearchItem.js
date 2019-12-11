@@ -62,13 +62,13 @@ class SearchItem extends React.Component {
                     <Convert price ={item.toy_Price}/>
                 </div>
                 <div>
-                    <button className="btn btn-primary" onClick={() => this.handleSubmit()}>Buy</button>
+                    <button className="btn btn-outline-success btn-lg btn-block " data-toggle="modal" data-target="#myModal" onClick={() => this.handleSubmit()}>I want to BUY this toy!</button>
                 </div>
                 {
                         updateSomething ? <div>there is not enough money, try to do some <Link to="/tasks" className="nav-Link">Tasks</Link> </div> : <div></div>
                     }
                     {
-                        otherPopup ? <div>Congratulations! You just got a new toy!!</div> : <div></div>
+                        otherPopup ? <div><img src="new-product.svg" class="rounded float-left" width="90" height="90"/> <br></br>Congratulations! You just got a new toy!!</div> : <div></div>
                     }
                 </div>
                 
