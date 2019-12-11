@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import Search from "./Search";
 import UserApi from "../../api/UserApi";
+import BuyToyPopup from "./BuyToyPopup";
 
 class HomePage extends Component {
     state = {
@@ -33,6 +34,7 @@ class HomePage extends Component {
                     </p>
                     <div>
                         <Search/>
+                        <BuyToyPopup/>
                     </div>
                 </center>
                 </div>
