@@ -30,14 +30,13 @@ public class TaskServiceTests {
 
 
     @Test
-    public void checkName() {
+    public void checkNameAndValueOfTask() {
         // given
         User user = new User("ebra@hotmail.com","asd123","ebra");
         Task task = new Task("task1",100,false,user);
 
         userService.register(user);
         Task task1 = taskService.create(task);
-
 
         String taskName =  task1.getTaskName();
         int taskValue = task1.getTaskValue();
