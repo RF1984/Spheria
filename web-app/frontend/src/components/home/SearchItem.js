@@ -61,6 +61,7 @@ class SearchItem extends React.Component {
                 <a className="close" onClick={close}>
                     &times;
                     </a>
+
                 <div className="header shadow p-3 mb-5 bg-warning rounded"> {item.toy_Name} </div>
                 <div className="content shadow p-3 mb-5 bg-white rounded">
                     <img width="50px" height="50px " src={item.toy_Photo}
@@ -79,7 +80,6 @@ class SearchItem extends React.Component {
                     {console.log(enoughMoney)}
                 </div>
             </div>
-            
         )
     }
 }

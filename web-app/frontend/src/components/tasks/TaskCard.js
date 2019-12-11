@@ -21,7 +21,7 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
             this.state = {
                 taskName: '',
                 taskValue: '',
-                isDoneComponent: false,
+                isDoneComponent: this.props.task.done,
 
 
             }
@@ -42,11 +42,13 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
         };
         async setDone(id){
            // window.taskApi = TasksApi
-            await TasksApi.addTaskValue(id);
-            window.updateBalance();
+           const response =  await TasksApi.addTaskValue(id);
+            //window.updateBalance();
             this.setState({
-                isDoneComponent: true,
+                isDoneComponent: response.data,
             })
+            //console.log(this.state.isDoneComponent)
+            window.updateBalance();
 
         }
         render() {
@@ -54,24 +56,31 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                 
                 return (
                     <div className="card" style={cardStyle}>
-                          <div className="card-body" >
+                          <div className="card-body bg-warning rounded" >
 
-                           <label htmlFor="type"> Task name:</label>
-                           <input disabled type="text"
-                           onChange={this.setTaskName} className="form-control"
-                           value={this.props.task.taskName}
-                           style={selectStyle} placeholder="no task name"></input>
+                                <label htmlFor="type"> Task name:</label>
+                                <input disabled type="text"
+                                onChange={this.setTaskName} className="form-control"
+                                value={this.props.task.taskName}
+                                style={selectStyle} placeholder="no task name"></input>
 
-                           <label htmlFor="type">Value: </label>
-                           <input disabled type="text"
-                           onChange={this.setTaskValue} className="form-control"
-                           value={this.props.task.taskValue}
-                           style={selectStyle}></input>
+                                 <label htmlFor="type">Value: </label>
+                                 <input disabled type="text"
+                                 onChange={this.setTaskValue} className="form-control"
+                                 value={this.props.task.taskValue}
+                                 style={selectStyle}></input>
+                                 <img src="strategy.svg" class="rounded float-right " width="50" height="50"alt="logo"/>
                             </div>
-                            {!isDoneComponent ? <div>
-                            <button type="button" class="btn btn-success" onClick={() => this.setDone(this.props.task.id)}>Done</button></div> 
+                               {!(isDoneComponent) ?
+
+                                <button type="button" class="btn btn-success" onClick={() => this.setDone(this.props.task.id)}>Done
+                                </button>
+
                             : <div></div>
                              }
+
+                            
+                            
 
                      </div>
 
@@ -102,8 +111,9 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
     }
 
     const cardStyle = {
-        width: '80%',
-        margin: 'auto'
+        width: '40%',
+         marginRight: '10px',
+         marginBottom: '10px'
     }
 
 

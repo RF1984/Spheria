@@ -9,9 +9,8 @@ const FooterPage = () => {
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
-            <h5 className="title">Spheria</h5>
             <p>
-              We make a difference.
+              ToyFy: Learn and Earn! 
             </p>
           </MDBCol>
           <MDBCol md="6 text-md-right">
@@ -31,8 +30,11 @@ const FooterPage = () => {
         </MDBRow>
       </MDBContainer>
       <div className="footer-copyright text-center">
+      <i className="fa fa-facebook"></i>
+      <i className="fa fa-twitter"></i>
+      <i className="fa fa-google"></i>
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.MDBootstrap.com"> ToysInTheWorld.com </a>
+          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.MDBootstrap.com">toyfy.com</a>
         </MDBContainer>
       </div>
     </MDBFooter>

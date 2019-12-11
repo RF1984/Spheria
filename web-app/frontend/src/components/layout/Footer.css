@@ -3,6 +3,7 @@ footer {
     bottom:0;
     width:100%;
     background:#ffc107;
+    font-size: 15pt;
  }
 
  footer ul {
@@ -12,3 +13,4 @@ footer {
  footer ul li {
      margin-right: 10px;
  }
+ 
