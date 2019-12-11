@@ -30,7 +30,7 @@ function LoginForm({onSubmit}) {
                     <div className="form-group">
                     <img src="parenthood.svg" class="rounded float-right " width="50" height="50"alt="logo"/>
                         <button 
-                            className="btn btn-success"
+                            className="btn btn-success float-left"
                             onClick={() => onSubmit({email, password})}>
                             Login
                         </button>

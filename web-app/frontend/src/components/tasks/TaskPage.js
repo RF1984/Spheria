@@ -72,11 +72,10 @@ class TaskPage extends React.Component {
                 )}
             </div> */
             <div id="main-group">
-                  <div className="container">
+                  <div>
                        <div>
-                        <br/>
-                         <img src="spinning-top.svg" class="rounded float-left" width="90" height="90"alt="logo"/>
-                         <img src="parenthood.svg" class="rounded float-right" width="90" height="90"alt="logo"/>
+                         <img src="spotlightLeft.svg" class="rounded float-left" width="80" height="80"alt="logo"/>
+                         <img src="spotlight.svg" class="rounded float-right" width="80" height="80"alt="logo"/>
 
                        </div>
                   <div>
@@ -91,26 +90,24 @@ class TaskPage extends React.Component {
                   
                    &nbsp;&nbsp;
                    
-                   <div class="alert alert-success" role="alert">
-                   <h4 class="alert-heading">Create a task</h4>
-                   <p>Are You Teaching Kids Responsibility? Create a Simple Task Challenges for your Kids</p>
-                    <hr></hr>
-                    <p class="mb-0">Click plus to create a new task
-                    &nbsp;&nbsp;
+                   <div className="alert alert-success" role="alert">
+                   <img src="homework.svg" class="rounded float-right" width="120" alt="logo"/>
+                   
+                   <p className="alert-text">Are You Teaching Kids Responsibility? 
+                   Create a Simple Tasks, give them opportunity to learn work ethics and prepare them for a real life.</p>
+                   
+                    
+                    <p class="mb-0">
                     <button type="button"
-                    className="btn btn-warning btn-lg"
+                    className="btn btn-warning btn-lg float-left"
                     style={buttonStyle}
                     data-toggle="modal"
-                    data-target={"#taskFormModal"}> <i className="fa fa-plus"></i>
+                    data-target={"#taskFormModal"}> <i className="fa fa-plus"></i> Create a new task
                    </button>
+                   &nbsp; 
                    </p>
                     </div>
 
-
-                    <button type="submit" disabled  
-                    className="btn btn-warning btn-lg"
-                    style={buttonStyle}> Create a task
-                     </button>
                      <Modal id="taskFormModal" title="Create a task">
                       <TaskForm onClickCreateTask = {(taskData) => this.onClickCreateTask(taskData)} />
                       </Modal>

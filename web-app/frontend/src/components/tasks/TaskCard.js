@@ -111,9 +111,10 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
     }
 
     const cardStyle = {
-        width: '40%',
+        width: '30%',
          marginRight: '10px',
          marginBottom: '10px'
+         
     }
 
 

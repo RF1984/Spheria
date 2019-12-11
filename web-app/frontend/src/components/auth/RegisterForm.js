@@ -40,7 +40,7 @@ function RegisterForm({onSubmit}) {
                     <div className="form-group">
                     <img src="parenthood1.svg" class="rounded float-right" width="50" height="50"alt="logo"/>
                         <button 
-                            className="btn btn-success"
+                            className="btn btn-success float-left"
                             onClick={e => onSubmit({name, email, password})}>
                             Create account
                         </button>

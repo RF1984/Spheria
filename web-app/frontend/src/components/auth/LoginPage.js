@@ -3,6 +3,7 @@ import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import Auth from "../../services/Auth";
 
+
 class LoginPage extends Component {
     async login(loginData) {
         const loginSuccess = await Auth.login(loginData);
@@ -28,18 +29,18 @@ class LoginPage extends Component {
                             <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qIZ2lua9aQA" allowfullscreen></iframe>
                             </div>
-                        
-                            <div class="card-body text-dark bg-warning mb-3 ">
-                            <p className="login">Lorem ipsum dolor amet tumeric food truck vegan 90's raclette pok pok. Paleo hexagon gentrify 
-                            gluten-free blue bottle polaroid man braid la croix authentic bicycle rights. Meditation chambray blue bottle, 
-                            single-origi coffee fingerstache disrupt lomo af direct trade
-                            Street art vice church-key cornhole health goth, readymade asymmetrical. Fanny pack! semiotics fixie blog 
-                            tousled la croix. Poke salvia tote bag forage you probably haven't heard of them. Aesthetic hell of kogi 
-                            bicycle rights. Meditation bicycle rights.
-                            Lyft celiac affogato, woke pabst everyday carry coloring book shoreditch post-ironic edison bulb biodiesel 
-                            artisan skateboard. Listicle blog next level kinfolk, sartorial art party cliche ramps. 
-                            Skateboard live-edge flexitarian bespoke unicorn kombucha paleo, church-key brunch single-origin coffee. 
-                            </p>
+
+                            <div className="card-body text-dark bg-warning mb-3">
+                                <p className="login">I hear I forget, I see I remember, I do I understand.</p>
+                                <p className="login">The concept that lays out in this quote is that children learn best by taking an active role in their learning.
+                                  Learning can be fun. A "fun" style of learning is a great way to introduce new subjects and new material to children.
+                                  Our web application has aimed to teach the children of age group 5 - 13 years some basics about value of money.
+                                </p>
+                                <p className="login"> The purpose here is to educate kids about the value of money and currency by comparing the value of their favorite toy in
+                                different countries in the world.
+                                The point is not to prevent the kid from getting the wanted toy, but to give them some
+                                understanding of money value and to prepare them for their future.
+                                </p>
                             </div>
                             
                         </div>
