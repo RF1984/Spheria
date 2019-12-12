@@ -1,14 +1,12 @@
 package se.kth.sda6.skeleton.tasks;
 
-// @TODO add Hibernate annotations to define which table and columns should be used to save the Post Object.
-
-import se.kth.sda6.skeleton.comments.Comment;
 import se.kth.sda6.skeleton.user.User;
-
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
+/**
+ *  Class to create Task objects, with hibernate notations so it will be converted into a table.
+ *  includes getters and setters
+ **/
 @Entity
 @Table(name = "taskList")
 public class Task {
@@ -26,24 +24,25 @@ public class Task {
     @Column(name = "done")
     private boolean isDone;
 
-    @ManyToOne ()
+    @ManyToOne()
     private User user;
+
+    public Task() {
+        this.isDone = false;
+    }
+
+    public Task(String taskName, int taskValue, boolean isDone, User user) {
+        this.taskName = taskName;
+        this.taskValue = taskValue;
+        this.isDone = false;
+        this.user = user;
+    }
 
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Task() { this.isDone = false;
-    }
-
-    public Task (String taskName, int taskValue, boolean isDone, User user) {
-        this.taskName = taskName;
-        this.taskValue = taskValue;
-        this.isDone = false;
         this.user = user;
     }
 
@@ -63,9 +62,13 @@ public class Task {
         this.taskName = taskName;
     }
 
-    public int getTaskValue() {return taskValue;}
+    public int getTaskValue() {
+        return taskValue;
+    }
 
-    public void setTaskValue (int taskValue) { this.taskValue = taskValue; }
+    public void setTaskValue(int taskValue) {
+        this.taskValue = taskValue;
+    }
 
     public boolean isDone() {
         return isDone;
