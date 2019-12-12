@@ -63,7 +63,6 @@ public class TaskController {
         User user = userService.findUserByEmail(email);
         Task task = taskService.getByID(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-       // if (user.getBalance() >= task.getTaskValue()) {
             int newBalance = user.getBalance() + task.getTaskValue();
             user.setBalance(newBalance);
             task.setDone(true);
@@ -71,7 +70,7 @@ public class TaskController {
             userService.update(user);
             return true;
         }
-        //else throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+
 
 }
 
