@@ -16,7 +16,7 @@ import Footer from './components/layout/Footer';
 import LoginPage from "./components/auth/LoginPage";
 import HomePage from './components/home/HomePage';
 import TaskPage from "./components/tasks/TaskPage";
-import ChatPage from './components/chat/ChatPage';
+import ParentsPage from './components/parents/ParentsPage';
 import ExchangePage from './components/exchange/ExchangePage';
  
 
@@ -36,8 +36,8 @@ function App() {
                         </Route>
 
 
-                        <Route path="/chat">
-                            <ChatPage/>
+                        <Route path="/parents">
+                            <ParentsPage/>
                         </Route>
                         
                         <Route path="/exchange">

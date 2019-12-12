@@ -1,8 +1,30 @@
 
 import React, { Component } from "react";
-import './ChatPage.css';
+import './ParentsPage.css';
+import UserApi from "../../api/UserApi";
 
-class ChatPage extends Component {
+
+class ParentsPage extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      newBalance: "",
+    };
+  }
+  async handleSubmit() {
+    try{
+      console.log(this.state.newBalance);
+      await UserApi.updateCurrentUserBalance(this.state.newBalance);
+      window.updateBalance();
+      this.setState({newBalance: ""})
+
+    }
+    catch (e){
+      console.log(e);
+    }
+  }
+
     render() {
         return (
             
@@ -20,13 +42,14 @@ class ChatPage extends Component {
                 <div class="input-group-prepend">
                   <span class="input-group-text">kr</span>
                 </div>
-                <input type="text"  class="form-control" aria-label="Amount (to the nearest dollar)"/>
+                <input type="text" value={this.state.newBalance}
+                    onChange={e => this.setState({newBalance:e.target.value})} class="form-control" aria-label="Amount (to the nearest dollar)"/>
                 <div class="input-group-append">
                   <span class="input-group-text">.00</span>
                 </div>
               </div>
               </center>
-                <button type="button" class="btn btn-info">Set Balance</button>
+                <button type="button" class="btn btn-info" onClick={() =>this.handleSubmit()}>Set Balance</button>
                 <center>
                 <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -40,7 +63,7 @@ class ChatPage extends Component {
               </center>
                 
                 <center>
-                <button type="button" class="btn btn-info">Set Allowanes</button>
+                <button type="button" class="btn btn-info">Set automatic allowance</button>
                 </center>
                 </div>
                 <div class="description">
@@ -65,4 +88,4 @@ class ChatPage extends Component {
     }
 }
 
-export default ChatPage;
+export default ParentsPage;
