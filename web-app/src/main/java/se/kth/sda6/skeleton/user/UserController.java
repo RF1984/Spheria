@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import se.kth.sda6.skeleton.auth.AuthResponse;
 import se.kth.sda6.skeleton.auth.AuthService;
 
+/**
+ * Controller method from Spring that handles requests from our web app (front end)
+ * Injects dependencies from the User service to the User JPA Repo
+ */
 @RestController
 public class UserController {
 

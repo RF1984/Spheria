@@ -12,6 +12,10 @@ import se.kth.sda6.skeleton.user.UserService;
 
 import java.util.List;
 
+/**
+ * Controller method from Spring that handles requests from our web app (front end)
+ * Injects dependencies from the Task service to the Task JPA Repo
+ */
 
 @RestController
 @RequestMapping("/tasks")
