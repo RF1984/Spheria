@@ -7,6 +7,9 @@ class UserApi {
         return Api.get('/users/current');
     }
 
+    updateCurrentUserBalance (balance) {
+        return Api.put('/users/'+balance+'/set');
+    }
 
 }
 
