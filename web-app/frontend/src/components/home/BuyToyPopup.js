@@ -1,6 +1,7 @@
 import React from 'react';
 import Popup from "reactjs-popup";
 import { Link } from "react-router-dom";
+import "./BuyToyPopup.css"
 
 class BuyToyPopup extends React.Component {
     constructor(props) {
@@ -33,11 +34,22 @@ class BuyToyPopup extends React.Component {
             closeOnDocumentClick
             onClose={this.closeModal}
           >
-            <div className="modal">
+            <div className="modal rounded">
               <a className="close" onClick={window.closeModal}>
                 &times;
               </a>
-              {this.state.money ? <div>congrats! You just bought a stupid toy</div> : <div>Sorry, you don't have enough money for this toy. Try to do some <Link to="/tasks" className="nav-Link">tasks</Link> first</div>}
+              {this.state.money ? 
+              
+              <div className="buytoy">
+              <div class="alert alert-success shadow" role="alert">Congrads!!!</div>
+              <img src="rockethappy.svg" class="rounded float-left" width="90"/>
+              <img src="uncle.svg" class="rounded float-right" width="100"/>
+              You just bought a new toy!
+              </div>: 
+
+              <div>Sorry, you don't have enough money for this toy. 
+              Try to do some <Link to="/tasks" className="nav-Link">tasks</Link> first
+              </div>}
               {console.log(this.money)}
             </div>
           </Popup>

@@ -90,21 +90,20 @@ class TaskPage extends React.Component {
                   
                    &nbsp;&nbsp;
                    
-                   <div className="alert alert-success" role="alert">
+                   <div className="alert alert-success shadow-lg" role="alert">
                    <img src="homework.svg" class="rounded float-right" width="120" alt="logo"/>
                    
                    <p className="alert-text">Are You Teaching Kids Responsibility? 
-                   Create a Simple Tasks, give them opportunity to learn work ethics and prepare them for a real life.</p>
-                   
-                    
+                   Create a Simple Tasks, give them opportunity to learn work ethics and prepare them for a real life. 
+                   Achieving something starts with a simple step!</p>
                     <p class="mb-0">
-                    <button type="button"
-                    className="btn btn-warning btn-lg float-left"
+                    <button type="button shadow-lg"
+                    className="btn btn-warning btn-lg btn-block float-left"
                     style={buttonStyle}
                     data-toggle="modal"
                     data-target={"#taskFormModal"}> <i className="fa fa-plus"></i> Create a new task
                    </button>
-                   &nbsp; 
+                   
                    </p>
                     </div>
 

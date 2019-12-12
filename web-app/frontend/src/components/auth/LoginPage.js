@@ -30,7 +30,7 @@ class LoginPage extends Component {
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qIZ2lua9aQA" allowfullscreen></iframe>
                             </div>
 
-                            <div className="card-body text-dark bg-warning mb-3">
+                            <div className="card-body text-dark bg-warning mb-5">
                                 <p className="login">I hear I forget, I see I remember, I do I understand.</p>
                                 <p className="login">The concept that lays out in this quote is that children learn best by taking an active role in their learning.
                                   Learning can be fun. A "fun" style of learning is a great way to introduce new subjects and new material to children.
@@ -63,9 +63,9 @@ class LoginPage extends Component {
                                 <div className="col-12 mt-4">
                                     <RegisterForm onSubmit={this.register }/>
                                 </div>
-                                <img src="aeroplane.svg" class="rounded float-left" width="75" height="75"alt="logo"/>
-                                <img src="baby.svg" class="rounded mx-auto d-block" width="110" height="110"alt="logo"/>
-                                <img src="rocket.svg" class="rounded float-right" width="75" height="75"alt="logo"/>
+                                <img src="rocket.svg" class="rounded float-left" width="60" height="70"alt="logo"/>
+                                <img src="siblings.svg" class="rounded mx-auto d-block" width="140" height="150"alt="logo"/>
+                                <img src="aeroplaneLeft.svg" class="rounded float-right" width="75" height="75"alt="logo"/>
                             </div>
                         </div>
                     </div>
