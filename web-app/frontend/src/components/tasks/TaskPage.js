@@ -94,7 +94,7 @@ class TaskPage extends React.Component {
                    <img src="homework.svg" class="rounded float-right" width="120" alt="logo"/>
                    
                    <p className="alert-text">Are You Teaching Kids Responsibility? 
-                   Create a Simple Tasks, give them opportunity to learn work ethics and prepare them for a real life. 
+                   Create a simple task, give them opportunity to learn work ethics and prepare them for a real life. 
                    Achieving something starts with a simple step!</p>
                     <p class="mb-0">
                     <button type="button shadow-lg"

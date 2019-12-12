@@ -68,18 +68,10 @@ class ParentsPage extends Component {
                 </div>
                 <div class="description">
                 <p><center><span class="teach">Teach kids to earn,save and spend</span></center><br/>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type 
-                specimen book. It has survived not only five centuries, but also the leap into 
-                electronic typesetting, remaining essentially unchanged. It was popularised in 
-                the 1960s with the release of Letraset <br/>
-                sheets containing Lorem Ipsum passages,
-                and more recently with <br/>
-                desktop publishing software like Aldus PageMaker including 
-                versions of Lorem Ipsum.</p>
+                This page is exclusive for parents use. Here you can set the balance (for example if you want to add a start balance to your kid).</p>
+                <p>You can also set an allowance on this secction of our app. Just type the amount you want, and every month it will automatically be added to the balance.</p>
                 <br/>
-                <a href="#">See Pourchased Toys</a>
+                <a href="#">See Purchased Toys</a>
                 </div>
 
             </div>
