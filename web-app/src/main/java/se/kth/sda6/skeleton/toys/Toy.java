@@ -1,8 +1,11 @@
 package se.kth.sda6.skeleton.toys;
 
-import se.kth.sda6.skeleton.user.User;
-
 import javax.persistence.*;
+
+/**
+ *  Class to create Toy objects, with hibernate notations so it will be converted into a table.
+ *  includes getters and setters
+ **/
 
 @Entity
 @Table(name = "toy")
