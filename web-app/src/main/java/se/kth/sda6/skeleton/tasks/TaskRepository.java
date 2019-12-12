@@ -5,10 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/*
-    @TODO extend the appropriate JpaRepository to get common database operations for Post
-    Add also the correct annotation to describe the Repository.
- */
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long> {
