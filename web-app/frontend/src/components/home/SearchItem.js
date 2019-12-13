@@ -33,29 +33,29 @@ class SearchItem extends React.Component {
         })
 
     }
-    
+
     async handleSubmit() {
         try {
             await ToysApi.buyToy(this.state.item.id)
             window.updateBalance();
-            this.setState({ enoughMoney: true,});
+            this.setState({ enoughMoney: true, });
             this.props.close();
             console.log(this.state.enoughMoney);
             window.openModal(this.state.enoughMoney);
-            
-              
-        
+
+
+
         } catch (e) {
-            this.setState({ enoughMoney: false,});
+            this.setState({ enoughMoney: false, });
             this.props.close();
             window.openModal(this.state.enoughMoney);
 
-              
+
         }
     }
 
     render() {
-        const { item, close, enoughMoney} = this.state;
+        const { item, close, enoughMoney } = this.state;
         return (
             <div className="modal">
                 <a className="close" onClick={close}>
@@ -77,7 +77,7 @@ class SearchItem extends React.Component {
 
                 <div>
                     <button className="btn btn-outline-success btn-lg btn-block" onClick={() => this.handleSubmit()}>I want to BUY this toy!</button>
-                    
+
                     {console.log(enoughMoney)}
                 </div>
             </div>
