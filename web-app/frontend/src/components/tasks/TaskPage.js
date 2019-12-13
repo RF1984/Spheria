@@ -3,7 +3,7 @@ import TaskForm from "./TaskForm";
 import TasksApi from "../../api/TasksApi";
 import TaskCard from "./TaskCard";
 import UserApi from "../../api/UserApi";
-
+import "./TaskPage.css";
 
 
 
@@ -14,7 +14,8 @@ class TaskPage extends React.Component {
         super(props);
 
         this.state = {
-            tasks : []
+            tasks : [],
+            showTaskForm : false,
         };
     }
         //task are created on click:
@@ -32,6 +33,7 @@ class TaskPage extends React.Component {
 
             this.setState({
                 tasks: newTask,
+                showTaskForm: false,
             });
         } catch (e) {
             console.error(e);
@@ -97,23 +99,26 @@ class TaskPage extends React.Component {
                    <p className="alert-text">Are You Teaching Kids Responsibility? 
                    Create a simple task, give them opportunity to learn work ethics and prepare them for a real life. 
                    Achieving something starts with a simple step!</p>
-                    <p class="mb-0">
+                    
                     <button className="create" type="button shadow-lg"
                     className="btn btn-warning btn-lg btn-block float-left"
-                    style={buttonStyle}
-                    data-toggle="modal"
-                    data-target={"#taskFormModal"}> <i className="fa fa-plus"></i> Create a new task
+                    style={buttonStyle} onClick={()=>this.setState({showTaskForm: true})}>
+                         <i className="fa fa-plus"></i> Create a new task
                    </button>                 
-                   </p>
+                   <div class="clearfix"></div>
+                   
                     </div>
 
-
                     
-                     <Modal id="taskFormModal" title="Create a task">
-                      <TaskForm onClickCreateTask = {(taskData) => this.onClickCreateTask(taskData)} />
-                      </Modal>
+                     <div>
+                         &nbsp;
+                         { this.state.showTaskForm ?
+                      <TaskForm onClickCreateTask = {(taskData) => this.onClickCreateTask(taskData)} /> : ""
+                         }
+                      </div>
                      </div>
-                      <div className="row">
+
+                      <div className="d-flex flex-row flex-wrap">
                        {tasks.map(task =>
                         <TaskCard key={task.id} task={task}/>
                         )}
@@ -124,29 +129,6 @@ class TaskPage extends React.Component {
         );
     }
 }
-
-const Modal = ({ children, id, title }) =>
-    <div id={id} className="modal fade" role="dialog" data-backdrop="false">
-       <div className="modal-dialog">
-                   <div className="modal-content bg-warning rounded">
-                       <div className="modal-header bg-warning rounded">
-                           <h4 className="modal-title">{title}</h4>
-                           
-                           <button type="button" className="close" data-dismiss="modal"> &times;
-                           </button>
-                           
-
-                           
-                       </div>
-                       <div className="modal-body">
-                           {children}
-                       </div>
-                   </div>
-        </div>
-
-    </div>
-
-
 
  const cardStyle = {
      width: '20%',

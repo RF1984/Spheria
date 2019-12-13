@@ -24,19 +24,15 @@ import React from "react";
 
 
     return (
-        
-        <div style={taskStyle}>
-                <div className="form-group">
+        <center>
+        <div style={taskStyle} >
+                <div className="card-body bg-warning rounded">
                     <label htmlFor="type"> Task name:</label>
                      <input type="text"
                      value={taskName}
                      onChange={e => setTaskName(e.target.value)} className="form-control">
                      </input>
-                 </div>
-
-
-
-                <div className="form-group">
+                 
                     <label htmlFor="type"> Value:</label>
 
 
@@ -44,11 +40,14 @@ import React from "react";
                     onChange={e => e.target.value > 0 ? setTaskValue(e.target.value) : alert("The value must be greater than zero")}
                     className="form-control">
                     </input>
-                </div>
+                
                 <img src="parenthood1.svg" class="rounded float-right" width="50" height="50"alt="logo"/>
                 <button type="submit" className="btn btn-success float-left" data-dismiss="modal" onClick={handleSubmit}>Create
                 </button>
+                <div class="clearfix"></div>
+                </div>
         </div>
+        </center>
 //
        /* <div className="card">
             <div className="card-body">
@@ -77,7 +76,10 @@ import React from "react";
                 );
 }
 const taskStyle= {
-    color: 'black'
+    color: 'black',
+    width: '50%',
+    marginBottom: '20px',
+    
 }
 
 export default TaskForm;
