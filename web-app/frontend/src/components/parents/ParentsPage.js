@@ -73,6 +73,19 @@ class ParentsPage extends Component {
                 <br/>
                 <a href="#">See Purchased Toys</a>
                 </div>
+                &nbsp;
+                <div>
+                <div class="col-sm-3">
+            <div className="card parents shadow">
+                <img class="card-img-top img-fluid" src="./toy_images/LEGO_Star_Wars_Action_Battle_Hoth.jpg" alt="Card image cap"/>
+                <div class="card-block">
+                    <h4 class="card-title">LEGO Star Wars Action</h4>
+            
+                    <p class="card-text"><small class="text-muted">Bought by&nbsp;<strong>You&nbsp;</strong>just now</small>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+                </div>
 
             </div>
             </div>
