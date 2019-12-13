@@ -59,7 +59,7 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                         <button type="button" class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
-                          <div className="card-body bg-warning rounded">
+                          <div className="card-body bg-warning rounded shadow">
 
                                 
                                 <input disabled type="text"
