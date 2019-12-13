@@ -22,6 +22,14 @@ import React from "react";
          setTaskValue('');
     };
 
+    const handleValueChange = (e) => {
+        const newValue = e.target.value
+        if (newValue.match(/^\d*$/)){
+            setTaskValue(newValue);
+        }
+        e.preventDefault()
+    }
+
 
     return (
         
@@ -40,8 +48,8 @@ import React from "react";
                     <label htmlFor="type"> Value:</label>
 
 
-                    <input type="number" value={taskValue}
-                    onChange={e => e.target.value > 0 ? setTaskValue(e.target.value) : alert("The value must be greater than zero")}
+                    <input type="text" value={taskValue}
+                    onChange={handleValueChange}
                     className="form-control">
                     </input>
                 </div>
