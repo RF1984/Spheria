@@ -55,33 +55,32 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                 const { taskName, taskValue,isDoneComponent} = this.state;
                 
                 return (
-                    <div className="card" style={cardStyle}>
+                    <div className="col-4 mb-4" style={cardStyle}>
+                        <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                           <div className="card-body bg-warning rounded">
 
-                                <label htmlFor="type"> Task name:</label>
+                                
                                 <input disabled type="text"
                                 onChange={this.setTaskName} className="form-control"
                                 value={this.props.task.taskName}
-                                style={selectStyle} placeholder="no task name"></input>
+                                style={selectStyle1} placeholder="no task name"></input>
 
-                                 <label htmlFor="type">Value: </label>
                                  <input disabled type="text"
                                  onChange={this.setTaskValue} className="form-control"
-                                 value={this.props.task.taskValue}
+                                 value={this.props.task.taskValue + " SEK"}
                                  style={selectStyle}></input>
-                                 <img src="strategy.svg" class="rounded float-right " width="50" height="50"alt="logo"/>
-                            </div>
+                                 <img src="strategy.svg" class="rounded" width="50" height="50"alt="logo"/>
+                           
                                {!(isDoneComponent) ?
 
                                 <button type="button" class="btn btn-success" onClick={() => this.setDone(this.props.task.id)}>Done
                                 </button>
 
-                            : <div></div>
+                            : <img src="tick.svg" class="rounded float-right" width="50" height="50"alt="logo"/>
                              }
-
-                            
-                            
-
+                             </div>
                      </div>
 
                       /* original code:
@@ -109,11 +108,16 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
         margin: 'auto',
         marginBottom: '30px'
     }
+    const selectStyle1 = {
+        width: '100%',
+        margin: 'auto',
+        marginBottom: '5px'
+    }
 
     const cardStyle = {
-        width: '30%',
-         marginRight: '10px',
-         marginBottom: '10px'         
+     //   width: '30%',
+       //  marginRight: '10px',
+         //marginBottom: '10px'         
     }
 
 
