@@ -42,12 +42,16 @@ class BuyToyPopup extends React.Component {
               
               <div className="buytoy">
               <div class="alert alert-success shadow" role="alert">Congrads!!!</div>
-              <img src="rockethappy.svg" class="rounded float-left" width="90"/>
-              <img src="uncle.svg" class="rounded float-right" width="100"/>
+              <img src="uncle.svg" class="rounded float-left" width="90"/>
+              <img src="rockethappy.svg" class="rounded float-right" width="90"/>
               You just bought a new toy!
               </div>: 
 
-              <div>Sorry, you don't have enough money for this toy. 
+              <div className="buytoy">
+              <div class="alert alert-danger shadow" role="alert">Sorry!!!</div>
+              <img src="promotion.svg" class="rounded float-left" width="90"/>
+              <img src="barrier.svg" class="rounded float-right" width="100"/>
+              You don't have enough money for this toy.
               Try to do some <Link to="/tasks" className="nav-Link">tasks</Link> first
               </div>}
               {console.log(this.money)}

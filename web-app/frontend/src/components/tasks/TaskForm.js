@@ -24,6 +24,7 @@ import React from "react";
 
 
     return (
+        
         <div style={taskStyle}>
                 <div className="form-group">
                     <label htmlFor="type"> Task name:</label>
@@ -44,7 +45,8 @@ import React from "react";
                     className="form-control">
                     </input>
                 </div>
-                <button type="submit" className="btn btn-success" data-dismiss="modal" onClick={handleSubmit}>Create
+                <img src="parenthood1.svg" class="rounded float-right" width="50" height="50"alt="logo"/>
+                <button type="submit" className="btn btn-success float-left" data-dismiss="modal" onClick={handleSubmit}>Create
                 </button>
         </div>
 //

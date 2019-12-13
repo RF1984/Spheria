@@ -56,7 +56,7 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                 
                 return (
                     <div className="card" style={cardStyle}>
-                          <div className="card-body bg-warning rounded" >
+                          <div className="card-body bg-warning rounded">
 
                                 <label htmlFor="type"> Task name:</label>
                                 <input disabled type="text"
@@ -113,8 +113,7 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
     const cardStyle = {
         width: '30%',
          marginRight: '10px',
-         marginBottom: '10px'
-         
+         marginBottom: '10px'         
     }
 
 

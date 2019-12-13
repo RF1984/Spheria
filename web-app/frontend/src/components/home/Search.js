@@ -44,8 +44,8 @@ class Search extends React.Component {
                 </div>
                 <div className="container">
                     <div className="rowrow mt-4">
-                        <div className="col-md-6">
-                            <label className="search label" htmlFor="search-input">
+                        <div className="col-md-6">                      
+                            <label className="search label rounded shadow-lg" htmlFor="search-input">
                                 <input
                                     type="text"
                                     name="query"
@@ -55,7 +55,7 @@ class Search extends React.Component {
                                     onChange={e => this.handleOnInputChange(e)}
                                 />
                                 <i className="fa fa-search search-icon" aria-hidden="true" />
-                            </label>
+                            </label>                         
                         </div>
                     </div>
 
