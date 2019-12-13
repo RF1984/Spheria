@@ -62,19 +62,20 @@ public class TaskController {
     }
 
     @PutMapping("/{id}/done")
-    public boolean updateUserBalanceByTask(@PathVariable Long id, @RequestHeader("authorization") String authHeader){
+    public boolean updateUserBalanceByTask(@PathVariable Long id, @RequestHeader("authorization") String authHeader) {
         String email = authService.getLoggedInUserEmail(authHeader);
         User user = userService.findUserByEmail(email);
         Task task = taskService.getByID(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        if (task.getTaskValue() >= 0) {
             int newBalance = user.getBalance() + task.getTaskValue();
             user.setBalance(newBalance);
             task.setDone(true);
             taskService.update(task);
             userService.update(user);
             return true;
-        }
+        } else throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+     }
 
-
-}
+    }
 

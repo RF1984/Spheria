@@ -40,7 +40,7 @@ import React from "react";
 
 
                     <input type="number" value={taskValue}
-                    onChange={e => setTaskValue(e.target.value)}
+                    onChange={e => e.target.value > 0 ? setTaskValue(e.target.value) : alert("The value must be greater than zero")}
                     className="form-control">
                     </input>
                 </div>
