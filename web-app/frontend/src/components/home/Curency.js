@@ -17,7 +17,7 @@ console.log(response)
 const EUR = {country: 'France', code: 'EUR', text: 'euros'};
 const INR = {country: 'India', code: 'INR', text: 'rupees'};
 const ILS = {country: 'Palestina', code: 'ILS', text: 'israel Shekels'}
-const PLN = {country: 'Poland', code: 'PLN', text: 'poland zloty'}
+const PLN = {country: 'Poland', code: 'PLN', text: 'polish zloty'}
 const PKR = {country: 'Pakistan',code: 'PKR', text: 'pakistan rupees'}
 const RON = {country: 'Romania', code: 'RON', text: 'romanian leu'}
 const RUB = {country: 'Russia', code: 'RUB', text: 'russian rubles'}
