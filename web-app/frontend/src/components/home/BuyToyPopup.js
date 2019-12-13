@@ -41,7 +41,7 @@ class BuyToyPopup extends React.Component {
               {this.state.money ? 
               
               <div className="buytoy">
-              <div class="alert alert-success shadow" role="alert">Congrads!!!</div>
+              <div class="alert alert-success shadow" role="alert">Congratulations!!!</div>
               <img src="uncle.svg" class="rounded float-left" width="90"/>
               <img src="rockethappy.svg" class="rounded float-right" width="90"/>
               You just bought a new toy!
