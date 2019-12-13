@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import se.kth.sda6.skeleton.auth.AuthResponse;
 import se.kth.sda6.skeleton.auth.AuthService;
 
@@ -32,7 +33,9 @@ public class UserController {
     public void updateCurrentUserBalance(@PathVariable int balance, @RequestHeader("authorization") String authHeader){
         String email = authService.getLoggedInUserEmail(authHeader);
         User user = userService.findUserByEmail(email);
-        user.setBalance(balance);
-        userService.update(user);
+        if (balance >= 1) {
+            user.setBalance(balance);
+            userService.update(user);
+        }else throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
     }
 }
