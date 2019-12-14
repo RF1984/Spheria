@@ -1,20 +1,13 @@
-//import React from "react";
-//import CommentSection from "../comment/CommentSection"
-//import CommentForm from "../comment/CommentForm"
+
 import React, { Component } from "react";
 import TasksApi from "../../api/TasksApi";
 
-
-/*this is the original code:
-function PostCard({post, onDeleteClick,onClick,onSubmit}) {
-        const handleSubmit = () => {
-            onSubmit({body: body});
-             setBody("");
-            };
-    const [body, setBody] = React.useState("");
-    const [isCommentDisplayed, setIsCommentDisplayed] = React.useState(false); */
-    // new code here:
-    // setting the state to empty field:
+/**
+ * Task card if the element where we show the tasks that were created
+ * it will show description and value that.
+ * It will also have a button "done" so the kid can press when he've done a task, so it will get the value in the account
+ * Button will change to a "check" symbol and task cannot be done again
+ */
     class TaskCard extends Component {
         constructor(props) {
             super(props)
@@ -41,13 +34,12 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
             });
         };
         async setDone(id){
-           // window.taskApi = TasksApi
+           
            const response =  await TasksApi.addTaskValue(id);
-            //window.updateBalance();
+            
             this.setState({
                 isDoneComponent: response.data,
             })
-            //console.log(this.state.isDoneComponent)
             window.updateBalance();
 
         }
@@ -82,24 +74,6 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
                              }
                              </div>
                      </div>
-
-                      /* original code:
-                    <div className="card mt-3">
-                        <div className="card-body">
-                            <p>
-                               {post.body}
-                            </p>
-
-                            <button className="btn btn-danger" onClick={onDeleteClick}>Delete</button>
-                            <button className="btn btn-primary ml-2" onClick={() => setIsCommentDisplayed(!isCommentDisplayed)}>Comment</button>
-                            {
-                            isCommentDisplayed?
-                            <div>
-                                <CommentSection post = {post}></CommentSection>
-                            </div>  :<span></span>
-                            }
-                       </div>
-                    </div> */
                 )
          };
     }
@@ -115,9 +89,7 @@ function PostCard({post, onDeleteClick,onClick,onSubmit}) {
     }
 
     const cardStyle = {
-     //   width: '30%',
-       //  marginRight: '10px',
-         //marginBottom: '10px'         
+        
     }
 
 

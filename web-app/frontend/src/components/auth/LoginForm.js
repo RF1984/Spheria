@@ -1,5 +1,10 @@
 import React, {useState} from 'react';
 
+/**
+* Login form where users can submit their email and password to enter the website
+*/
+
+
 function LoginForm({onSubmit}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

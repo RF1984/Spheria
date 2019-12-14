@@ -2,6 +2,12 @@ import React from "react";
 import Axios from "axios";
 import { equal } from "assert";
 import './Curency.css'
+
+/**
+ * In this class we take a random currency from a list, convert the price of the selected toy (in SEK) to that currency
+ * Then it will get a random message that fits the toy price range, to display to the user
+ */
+
 class Convert extends React.Component {
     state = {
         rates: null,

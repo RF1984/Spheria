@@ -4,6 +4,10 @@ import Search from "./Search";
 import UserApi from "../../api/UserApi";
 import BuyToyPopup from "./BuyToyPopup";
 
+
+/**
+ * Home page, this is the page where users can search for toys and try to "buy" them
+ */
 class HomePage extends Component {
     state = {
         user: null,

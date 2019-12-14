@@ -3,6 +3,12 @@ import Popup from "reactjs-popup";
 import { Link } from "react-router-dom";
 import "./BuyToyPopup.css"
 
+
+/**
+ * component tha shows a pop up after the user decides to buy a toy
+ * checks the balance and display one of two messages.
+ */
+
 class BuyToyPopup extends React.Component {
     constructor(props) {
       super(props);
@@ -41,7 +47,7 @@ class BuyToyPopup extends React.Component {
               {this.state.money ? 
               
               <div className="buytoy">
-              <div class="alert alert-success shadow" role="alert">Congrads!!!</div>
+              <div class="alert alert-success shadow" role="alert">Congratulations!!!</div>
               <img src="uncle.svg" class="rounded float-left" width="90"/>
               <img src="rockethappy.svg" class="rounded float-right" width="90"/>
               You just bought a new toy!
@@ -63,5 +69,5 @@ class BuyToyPopup extends React.Component {
   };
   export default BuyToyPopup;
 
-            //<Popup text={money ? <div>congrats! You just bought a stupid toy</div> : <div>go and do some work boy</div>}/>
+           
         

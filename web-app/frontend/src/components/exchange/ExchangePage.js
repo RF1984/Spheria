@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import "./ExchangePage.css"
 
+
+/**
+* Exchange page. General page where users will be able to see used toys from other users,
+* submit their own used toys and trade them with each other.
+* This page is not functional yet.
+*/
 class ExchangePage extends Component {
     render() {
         return (
