@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 import BuyToyPopup from './BuyToyPopup';
 import Popup from "reactjs-popup";
 
-
+/**
+ * Component that displays the selected toys by the users
+ */
 class SearchItem extends React.Component {
 
     constructor(props) {

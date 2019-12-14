@@ -3,6 +3,11 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 import './Footer.css';
 
+
+/**
+ * Footer of our website. Bar on the bottom with some information about the page
+ */
+
 const FooterPage = () => {
   return (
     <MDBFooter color="blue" className="font-small pt-4 mt-4">

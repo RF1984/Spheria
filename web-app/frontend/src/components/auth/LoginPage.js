@@ -3,7 +3,9 @@ import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import Auth from "../../services/Auth";
 
-
+/**
+* Entering page where users can sign in and/or log in
+*/
 class LoginPage extends Component {
     async login(loginData) {
         const loginSuccess = await Auth.login(loginData);

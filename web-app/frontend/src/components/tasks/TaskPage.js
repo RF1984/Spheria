@@ -6,7 +6,10 @@ import UserApi from "../../api/UserApi";
 import "./TaskPage.css";
 
 
-
+/**
+ * In the task page users are able to create new tasks, click in tasks to complete them (value will be added to their balance),
+ * and see available tasks
+ */
 
 
 class TaskPage extends React.Component {

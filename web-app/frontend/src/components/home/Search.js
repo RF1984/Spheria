@@ -4,7 +4,9 @@ import './Search.css'
 import ToysApi from '../../api/ToysApi';
 import SearchItem from "./SearchItem";
 
-
+/**
+ * this class correspondes to the search engine that connects with the toy database to fetch the results and display them
+ */
 class Search extends React.Component {
 
     constructor(props) {

@@ -3,7 +3,11 @@ import React, { Component } from "react";
 import './ParentsPage.css';
 import UserApi from "../../api/UserApi";
 
-
+/**
+ * The component represents the parents page. In here the user can set balance, 
+ * set automatically allowance that will be added every month (not functional yet)
+ * See purchase toys by the child (not functional yet)
+ */
 class ParentsPage extends Component {
   constructor(props){
     super(props);

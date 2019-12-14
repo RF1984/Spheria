@@ -1,5 +1,11 @@
 import React, {useState} from "react";
 
+
+/**
+* Form where users can register and create an account
+* They will provide a username, email and passoword. This information will be stored in a database in the backend.
+*/
+
 function RegisterForm({onSubmit}) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");

@@ -1,5 +1,10 @@
 import React from "react";
 
+
+/**
+ * This is a form that is open once the user clicks on create task. 
+ * It will ask for a task discription and a task value
+ */
    function TaskForm( {onClickCreateTask} ) {
    //const [body, setBody] = React.useState("");
    const [taskName, setTaskName] = React.useState('');

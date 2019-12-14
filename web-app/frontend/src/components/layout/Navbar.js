@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import UserApi from "../../api/UserApi";
 
+
+/**
+ * Navigation bar of our website
+ * In this componente we display the links to our pages, the name and balance of the user, and a logout button.
+ */
 class Navbar extends React.Component {
     state = {
         user: "",
