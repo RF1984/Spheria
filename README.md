@@ -70,7 +70,7 @@ New user needs to Sign up block and add:
 * Email,
 * Password
 
-![](login.png)
+![](./img/login.png)
 
 ------------------------------------------------------------------------
 #### 1. Home Page
@@ -78,7 +78,7 @@ New user needs to Sign up block and add:
 > In search block:
 
 ![](home.png)
-![](Search.png)
+![](./Img/Search.png) 
 
 > Enter the toy which you want
 Click on your favourite toy
@@ -93,8 +93,8 @@ Popup will show you :
 > After Clicking on the buy button - You will see a popup message:
 Price from toy is going automatically to the balance 
 
-![](currency.png)
-![](nomoney.png)
+![](./Img/currency.png)
+![](./Img/nomoney.png)
 
 
 
@@ -108,8 +108,8 @@ Popup will show you task which you can create
  Page is showing list of tasks. 
 Each task has Done button which suppose to be pressed after finishing.
 
-![](Tasks.png)
-![](createtask.png)
+![](./Img/Tasks.png)
+![](./Img/createtask.png)
 
 
 > Congratulations now you have enough money to go back to Home page and buy toys.
@@ -126,7 +126,7 @@ Each task has Done button which suppose to be pressed after finishing.
  
 * Click plus and add picture of toy which you want to exchange
 
-![](exchange.png)
+![](./Img/exchange.png) 
 
 ----------------------------------------------------------------------
 #### 4. Parents 
@@ -138,4 +138,4 @@ Parents can:
 * Set Allowances
 * See Purchased Toys
 
-![](Parents.png)
+![](./Img/Parents.png)
